@@ -7,8 +7,9 @@ export default function ProjectLayout({
   children: React.ReactNode;
 }) {
   const fullpathname = usePathname();
-  const pathname = fullpathname.startsWith("/blog") ? "/blog" : fullpathname;
-  console.log(pathname);
+  const pathname = fullpathname.startsWith("/projects")
+    ? "/projects"
+    : fullpathname;
 
   return (
     <div>

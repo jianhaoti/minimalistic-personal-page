@@ -7,7 +7,7 @@ export default function Home() {
           <a href="/blog">Blog</a>
         </li>
         <li>
-          <a href="/blog">Projects</a>
+          <a href="/projects">Projects</a>
         </li>
         <li className="font-mono mt-1 pt-1">jianhaoti@gmail.com</li>{" "}
       </ul>

@@ -2,6 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math"; // Add this import
+import "katex/dist/katex.min.css"; // Ensure Katex CSS is loaded
 
 export default async function BlogPost({
   params,
@@ -23,9 +26,15 @@ export default async function BlogPost({
           {data.date}
         </p>
       </header>
-      {/* Main Content */}
-      <article className="prose">
-        <ReactMarkdown>{content}</ReactMarkdown>
+
+      {/* Blog Post */}
+      <article className="prose ">
+        <ReactMarkdown
+          remarkPlugins={[remarkMath]} // Use remark-math to parse math expressions
+          rehypePlugins={[rehypeKatex]} // Render them with rehype-katex
+        >
+          {content}
+        </ReactMarkdown>
       </article>
     </div>
   );
