@@ -1,6 +1,6 @@
 ---
 title: "A Geometer's Derivation of the Graph Laplacian"
-date: "2024-10-26"
+date: "26 October 2024"
 tags: ["graph theory", "linear algebra"]
 excerpt: "
 The graph Laplacian is the central object of study in spectral graph theory, but its ties to the standard Laplacian isn’t apparent in standard references. In this article, we bridge this gap by showing both Laplacians can be interpreted as the difference between a function value and its local average.

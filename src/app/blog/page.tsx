@@ -1,9 +1,17 @@
 export default function Blog() {
   const posts = [
     {
+      slug: "no-cloning",
+      title: "A Simple Proof of No Cloning",
+      date: "11 December 2024",
+      tags: ["quantum computing", "linear algebra"],
+      excerpt:
+        "We provide a simple proof of the no cloning theorem from quantum computing.",
+    },
+    {
+      slug: "geometers-derivation-graph-laplacian",
       title: "A Geometer's Derivation of the Graph Laplacian",
       date: "26 October 2024",
-      slug: "geometers-derivation-graph-laplacian",
       tags: ["graph theory", "linear algebra"],
       excerpt:
         "The graph Laplacian is the central object of study in spectral graph theory, but its ties to the standard Laplacian isn’t apparent in standard references. In this article, we bridge this gap by showing both Laplacians can be interpreted as the difference between a function value and its local average.",

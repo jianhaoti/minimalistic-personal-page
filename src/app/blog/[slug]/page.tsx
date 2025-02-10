@@ -21,7 +21,7 @@ export default async function BlogPost({
       {/* Header Section */}
       <header className="border-b border-gray-300 pb-8 mb-8">
         <h1 className="text-2xl font-bold mb-4">{data.title}</h1>
-        <p className="text-gray-600 mb-2">{data.excerpt}</p>
+        <p className="text-gray-500 text-sm mb-2">{data.excerpt}</p>
         <p className="uppercase text-gray-700 text-xxs font-bold">
           {data.date}
         </p>
