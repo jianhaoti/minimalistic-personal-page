@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math"; // Add this import
 import "katex/dist/katex.min.css"; // Ensure Katex CSS is loaded
+import { notFound } from "next/navigation";
 
 export default async function BlogPost({
   params,
@@ -13,6 +14,12 @@ export default async function BlogPost({
 }) {
   const { slug } = params;
   const filePath = path.join(process.cwd(), "blogPosts", `${slug}.md`);
+
+  // Check if the file exists
+  if (!fs.existsSync(filePath)) {
+    notFound(); // Redirect to the not-found.tsx page
+  }
+
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
 
