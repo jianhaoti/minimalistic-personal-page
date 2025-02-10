@@ -3,15 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #ffffff; /* White background */
+  --foreground: #171717; /* Black text */
 }
 
 body {
@@ -37,7 +30,7 @@ h2 {
 }
 
 a {
-  color: var(--foreground);
+  color: var(--foreground); /* Black text for links */
   text-decoration: underline;
 }
 
