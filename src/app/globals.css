@@ -30,7 +30,7 @@ h2 {
 }
 
 a {
-  color: var(--foreground); /* Black text for links */
+  color: var(--foreground);
   text-decoration: underline;
 }
 

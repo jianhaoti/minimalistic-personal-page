@@ -1,6 +1,14 @@
 export default function Blog() {
   const posts = [
     {
+      slug: "gauss-equation",
+      title: "Gauss–Codazzi Equations",
+      date: "10 February 2025",
+      tags: ["geometry", "linear algebra", "Riemannian geometry"],
+      excerpt:
+        "We take two traces of the Gauss-Codazzi equations to get a scalar relationship involving intrinsic and extrinsic curvature quantities.",
+    },
+    {
       slug: "no-cloning",
       title: "A Simple Proof of No Cloning",
       date: "11 December 2024",
@@ -14,14 +22,14 @@ export default function Blog() {
       date: "26 October 2024",
       tags: ["graph theory", "linear algebra"],
       excerpt:
-        "The graph Laplacian is the central object of study in spectral graph theory, but its ties to the standard Laplacian isn’t apparent in standard references. In this article, we bridge this gap by showing both Laplacians can be interpreted as the difference between a function value and its local average.",
+        "The graph Laplacian is central in spectral graph theory, but its link to the standard Laplacian is often unclear. We show both represent the difference between a function and its local average.",
     },
   ];
 
   return (
-    <div className="space-y-8">
+    <div>
       {posts.map((post, index) => (
-        <article key={index} className="mb-16">
+        <article key={index} className="mb-12">
           <p className="uppercase text-gray-700 text-xxs font-bold my-1">
             {post.date}
           </p>
