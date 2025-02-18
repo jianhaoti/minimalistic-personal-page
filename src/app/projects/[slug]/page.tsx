@@ -7,6 +7,7 @@ import remarkMath from "remark-math"; // Add this import
 import "katex/dist/katex.min.css"; // Ensure Katex CSS is loaded
 import { notFound } from "next/navigation";
 import SideBySideImages from "@/components/SideBySideImages";
+import rehypeRaw from "rehype-raw";
 
 export default async function ProjectPost({
   params,
@@ -28,7 +29,18 @@ export default async function ProjectPost({
     <div>
       {/* Header Section */}
       <header className="border-b border-gray-300 pb-8 mb-8">
-        <h1 className="text-2xl font-bold mb-4">{data.title}</h1>
+        <div className="flex">
+          <h1 className="text-2xl font-bold mb-4">{data.title}</h1>
+          <a
+            href={data.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 text-gray-600 hover:text-gray-900 text-2xl"
+          >
+            {" "}
+            ↗
+          </a>
+        </div>
         <p className="text-gray-500 text-sm mb-2">{data.excerpt}</p>
       </header>
 
@@ -36,7 +48,7 @@ export default async function ProjectPost({
       <article className="prose">
         <ReactMarkdown
           remarkPlugins={[remarkMath]} // Use remark-math to parse math expressions
-          rehypePlugins={[rehypeKatex]} // Render them with rehype-katex
+          rehypePlugins={[rehypeKatex, rehypeRaw]} // Render them with rehype-katex
           components={{
             img: ({ src, alt }) => {
               // Define a case for side-by-side images

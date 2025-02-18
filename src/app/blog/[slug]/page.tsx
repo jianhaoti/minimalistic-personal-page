@@ -6,6 +6,7 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math"; // Add this import
 import "katex/dist/katex.min.css"; // Ensure Katex CSS is loaded
 import { notFound } from "next/navigation";
+import rehypeRaw from "rehype-raw";
 
 export default async function BlogPost({
   params,
@@ -38,7 +39,7 @@ export default async function BlogPost({
       <article className="prose">
         <ReactMarkdown
           remarkPlugins={[remarkMath]} // Use remark-math to parse math expressions
-          rehypePlugins={[rehypeKatex]} // Render them with rehype-katex
+          rehypePlugins={[rehypeKatex, rehypeRaw]} // Render them with rehype-katex
         >
           {content}
         </ReactMarkdown>

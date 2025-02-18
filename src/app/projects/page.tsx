@@ -16,7 +16,7 @@ export default function Projects() {
       languages: ["React", "Typescript", "JavaScript", "Python", "Node.js"],
       link: "https://graphvisual.vercel.app/",
       description:
-        "A React web app which allow users to create their own graphs, and step-through common graph algorithms alongside its pseudocode.",
+        "A web app which allow users to create their own graphs, and step-through common graph algorithms alongside its pseudocode.",
     },
   ];
 
