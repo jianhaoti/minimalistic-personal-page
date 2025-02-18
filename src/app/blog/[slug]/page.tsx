@@ -35,7 +35,7 @@ export default async function BlogPost({
       </header>
 
       {/* Blog Post */}
-      <article className="prose ">
+      <article className="prose">
         <ReactMarkdown
           remarkPlugins={[remarkMath]} // Use remark-math to parse math expressions
           rehypePlugins={[rehypeKatex]} // Render them with rehype-katex

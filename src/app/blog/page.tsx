@@ -2,11 +2,11 @@ export default function Blog() {
   const posts = [
     {
       slug: "gauss-equation",
-      title: "Gauss–Codazzi Equations",
+      title: "Gauss Equation",
       date: "10 February 2025",
       tags: ["geometry", "linear algebra", "Riemannian geometry"],
       excerpt:
-        "We take two traces of the Gauss-Codazzi equations to get a scalar relationship involving intrinsic and extrinsic curvature quantities.",
+        "We take two traces of the Gauss equation to get a scalar relationship between intrinsic and extrinsic curvature quantities.",
     },
     {
       slug: "no-cloning",

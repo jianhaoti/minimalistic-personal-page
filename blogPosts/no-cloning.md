@@ -26,13 +26,15 @@ $$\text{ }$$
 _Proof:_ Suppose otherwise, and consider the mapping on $u + v$. We compute:
 
 $$
-\begin{aligned}
-u \otimes u + u \otimes v + v \otimes u + v \otimes v
-&= (u + v) \otimes (u + v) \\
-&= \Delta(u+v) \\
-&= \Delta(u) + \Delta(v) \\
-&= u \otimes u + v \otimes v.
-\end{aligned}
+\begin{equation}
+    \begin{split}
+        u \otimes u + u \otimes v + v \otimes u + v \otimes v
+        &= (u + v) \otimes (u + v) \\
+        &= \Delta(u+v) \\
+        &= \Delta(u) + \Delta(v) \\
+        &= u \otimes u + v \otimes v.
+    \end{split}
+\end{equation}
 $$
 
 Moving terms around, we find $u \otimes v = -v \otimes u$, which is false for general vectors $u, v$. □

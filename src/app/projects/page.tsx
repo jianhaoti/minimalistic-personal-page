@@ -29,8 +29,19 @@ export default function Projects() {
           </p>
 
           <h2 className="text-lg font-bold">
-            <a href={post.link} className="no-underline hover:underline">
+            <a
+              href={`/projects/${post.slug}`}
+              className="no-underline hover:underline"
+            >
               {post.title}
+            </a>
+            <a
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 text-gray-600 hover:text-gray-900"
+            >
+              ↗
             </a>
           </h2>
           <p className="text-sm leading-relaxed mt-1">{post.description}</p>

@@ -28,7 +28,9 @@ $$\text{ }$$
 To extract this heuristic from $\Delta$, let’s explore why the Laplacian appears in the heat equation. We say $u(x,t)$, subject to the initial condition $u(x,0)=f(x)$ solves the heat equation if
 
 $$
+\begin{equation}
 \Delta u(x,t)= \partial_t u.
+\end{equation}
 $$
 
 In the above, f is interpreted as an initial heat distribution, and the solution $u$ is interpreted as the time evolution for $f$. For example, if we take $f(x):= \delta_p(x)$ a delta function at $p$, then this models the case of a singular heat source at $p$. For an initial configuration of heat $u(x,0)$ how does heat spread at $u(x,t)$ for $t>0$? The intuition is that heat averages out. Suppose a point $p$ on average is hotter than its neighbors, then $p$ gets cooler in the future. In detail, if we define the following variables for $x\in B_r(p)$ at future time $t> t_0$
@@ -68,7 +70,9 @@ $$\text{ }$$
 So why does the Laplacian smooth out data? In one-dimension (the higher dimensional cases follow similarly), the Laplacian is the second derivative. Consider the Taylor expansion of the function $u$ around the point $p$. That is for $x\in B_r(p)$, we have the expansion
 
 $$
+\begin{equation}
 u(p+x) \approx u(p)+u'(p)x+\frac{1}{2} u''(p)x^2.
+\end{equation}
 $$
 
 Here, $B_r(p):=[p-r,p+r]$ and $r>0$ is a small parameter. The average of $u$ in this interval is defined as
@@ -80,25 +84,31 @@ $$
 where $|B_r|:=\text{length}(B_r)=2r$. Integrating the Taylor expansion of $u$ over the ball and dividing $|B_r|$ gives the Taylor expansion of $\bar{u}$. In detail,
 
 $$
-\begin{align*}
-    \bar{u} &= \frac{1}{|B_r|}\int_{-r}^{r}u(p+x)dx\\
-            &\approx \frac{1}{|B_r|}\bigg(\int_{-r}^{r}u(p)dx+\int_{-r}^{r} u'(p)xdx + \frac{1}{2}\int_{-r}^{r}u''(p)x^2dx \bigg).
-\end{align*}
+\begin{equation}
+    \begin{split}
+        \bar{u} &= \frac{1}{|B_r|}\int_{-r}^{r}u(p+x)dx\\
+                &\approx \frac{1}{|B_r|}\bigg(\int_{-r}^{r}u(p)dx+\int_{-r}^{r} u'(p)xdx + \frac{1}{2}\int_{-r}^{r}u''(p)x^2dx \bigg).
+    \end{split}
+\end{equation}
 $$
 
 Since $u(p), u'(p), u''(p)\in \mathbb{R}$ are independent of $x$, they can be factored out of their corresponding integral. Furthermore, since $x$ is an odd function, the second term vanishes since the domain is symmetric about $0$. Therefore,
 
 $$
-\begin{align*}
-    \bar{u} &\approx\frac{u(p)}{|B_r|}\int_{-r}^rdx+\frac{u''(p)}{2|B_r|}\int_{-r}^r x^2dx\\
-            &= u(p)+\frac{u''(p)}{6}r^2
-\end{align*}
+\begin{equation}
+    \begin{split}
+        \bar{u} &\approx\frac{u(p)}{|B_r|}\int_{-r}^rdx+\frac{u''(p)}{2|B_r|}\int_{-r}^r x^2dx\\
+                &= u(p)+\frac{u''(p)}{6}r^2
+    \end{split}
+\end{equation}
 $$
 
 Rewriting this, we arrive at the aforementioned heuristic
 
 $$
+\begin{equation}
 \frac{6}{|B_r|}(\bar{u}-u(p))\approx u''(p).
+\end{equation}
 $$
 
 Again, this interpretation of the Laplacian is that involves _no derivatives_, making it amenable for generalizing to the discrete case.
@@ -116,7 +126,9 @@ $$\text{ }$$
 We briefly recall the underlying vector space $A$ acts on. Since its size is $|V|^2$, it acts on the vector space $\mathbb{R}^V := \text{Functions}(V,\mathbb{R})$, the [free vector space](https://planetmath.org/freevectorspaceoveraset) on $V$. Vertices $x\in V$ are in $1:1$ correspondence to a canonical basis element of $\mathbb{R}^V$, namely the indicator functions $\delta_x$. This justifies conflating a vector $x$ with its corresponding function $x: V\to \mathbb{R}.$ Moving on, we compute
 
 $$
+\begin{equation}
 (Ax)^i = \sum\limits_{j\in V} A^i_j x^j = \sum\limits_{j\in N(i)} x^j,
+\end{equation}
 $$
 
 where $N(i)$ denotes the neighbors of the vertex $i$. The last equality follows by the definition of the adjacency matrix, which is defined as the indicator matrix on $E$. In English, this computation tells us after matrix multiplication with the adjacency matrix, the resulting $i^{th}$ component contains the sum over its neighbors. This is awfully close to averaging the function value of $i$ over its neighbors. In fact, dividing out this number by the degree $d\text{ } (:= \# \text{ of neighbors})$ turns the result into a genuine average. Thus, the mapping $x\mapsto \frac{A}{d}x$ is analogous to $u\mapsto \bar{u}$.
