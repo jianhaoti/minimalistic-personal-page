@@ -16,7 +16,9 @@ $$\text{ }$$
 The mapping $\Delta: V \to V \otimes V$
 
 $$
+\begin{equation}
 v \mapsto v \otimes v
+\end{equation}
 $$
 
 of sending an element to the diagonal is _not_ a linear transformation.

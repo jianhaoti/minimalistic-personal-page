@@ -7,25 +7,29 @@ The graph Laplacian is central in spectral graph theory, but its link to the sta
 "
 ---
 
-This is essentially one long response to the [MathOverflow question](https://mathoverflow.net/questions/368963/intuitively-what-does-a-graph-laplacian-represent?answertab=scoredesc): _Intuitively, what does the graph Laplacian represent?_ The standard way of generalizing the Laplacian
+**Introduction.** This is essentially one long response to the [MathOverflow question](https://mathoverflow.net/questions/368963/intuitively-what-does-a-graph-laplacian-represent?answertab=scoredesc): _Intuitively, what does the graph Laplacian represent?_ The standard way of generalizing the Laplacian
 
 $$
+\begin{equation}
 \Delta f:= \text{div}(\nabla f)
+\end{equation}
 $$
 
 to the discrete case of graphs is to interpret the gradient of a function as a difference between function values on nodes sharing a common edge. Following this line of thought allows you to exploit the link between the Laplacian and energy minimization through à la Euler-Lagrange. This leads to the idea of a Laplacian quadratic form.
 
 $$\text{ }$$
 
-In this article we take a different approach. Our new strategy is to develop a purely _continuous_ heuristic of $\Delta$ involving no derivatives, then to import that idea the graph setting to define the graphical Laplacian.
+In this article we take a different approach. Our new strategy is to develop a purely _continuous_ heuristic of $\Delta$ involving no derivatives, then to import that idea the graph setting to define the graphical Laplacian. As a small technicality, we're going to generalize the _negative_ Laplacian, namely the negative of equation $(1)$.
 
 $$\text{ }$$
 
-> **Heuristic:** _The Laplacian $\Delta$ measures the difference between function value and its local average value._
+<div style="border:0.5px solid black; padding:10px ;">
+    <u>Heuristic:</u> The negative Laplacian measures the difference between a function value and its local average value.
+</div>
 
 $$\text{ }$$
 
-To extract this heuristic from $\Delta$, let’s explore why the Laplacian appears in the heat equation. We say $u(x,t)$, subject to the initial condition $u(x,0)=f(x)$ solves the heat equation if
+**Heat equation Intuition.** To extract this heuristic from $\Delta$, let’s explore why the Laplacian appears in the heat equation. We say $u(x,t)$, subject to the initial condition $u(x,0)=f(x)$ solves the heat equation if
 
 $$
 \begin{equation}
@@ -33,41 +37,11 @@ $$
 \end{equation}
 $$
 
-In the above, f is interpreted as an initial heat distribution, and the solution $u$ is interpreted as the time evolution for $f$. For example, if we take $f(x):= \delta_p(x)$ a delta function at $p$, then this models the case of a singular heat source at $p$. For an initial configuration of heat $u(x,0)$ how does heat spread at $u(x,t)$ for $t>0$? The intuition is that heat averages out. Suppose a point $p$ on average is hotter than its neighbors, then $p$ gets cooler in the future. In detail, if we define the following variables for $x\in B_r(p)$ at future time $t> t_0$
+In the above, f is interpreted as an initial heat distribution, and the solution $u$ is interpreted as the time evolution for $f$. How does heat spread with time? The basic intuition is that heat averages out by comparison to its neighbors. If a point $p$ on is hotter (cooler) than its neighbors, then the point $p$ gets cooler (hotter) in the future. This intuition combined with equation $(2)$ suggests that as time passes, the Laplacian performs an averaging process on $u$.
 
 $$\text{ }$$
 
-$$
-\text{1. temp}_{\text{future}}(t) := u(p,t),
-$$
-
-$$
-\text{2. temp}_{\text{current}}:= u(p,t_0),
-$$
-
-$$
-\text{3. avgCurrTemp} := \int_{x\in B_r(p)} u(x,t_0) dx.
-$$
-
-$$\text{ }$$
-
-Then we see that the temperature evolves in the following fashion
-
-$$
-\text{temp}_{\text{future}}(t) =
-\begin{cases}
-    \uparrow & \text{avgCurrTemp} > \text{temp}_{\text{current}}(p)\\
-    \downarrow & \text{avgCurrTemp} < \text{temp}_{\text{current}}(p).\\
-\end{cases}
-$$
-
-$$\text{ }$$
-
----
-
-$$\text{ }$$
-
-So why does the Laplacian smooth out data? In one-dimension (the higher dimensional cases follow similarly), the Laplacian is the second derivative. Consider the Taylor expansion of the function $u$ around the point $p$. That is for $x\in B_r(p)$, we have the expansion
+**Formalism.** So why does the Laplacian smooth out data? We can see this with a quick Taylor expansion calculation. In one-dimension (the higher dimensional cases follow similarly), the Laplacian is the second derivative. Consider the Taylor expansion of the function $u$ around the point $p$. That is for $x\in B_r(p)$, we have the expansion
 
 $$
 \begin{equation}
@@ -78,7 +52,9 @@ $$
 Here, $B_r(p):=[p-r,p+r]$ and $r>0$ is a small parameter. The average of $u$ in this interval is defined as
 
 $$
+\begin{equation}
 \bar{u}:=\frac{1}{|B_r|}\int_{B_r(p)}u(x)dx,
+\end{equation}
 $$
 
 where $|B_r|:=\text{length}(B_r)=2r$. Integrating the Taylor expansion of $u$ over the ball and dividing $|B_r|$ gives the Taylor expansion of $\bar{u}$. In detail,
@@ -115,11 +91,7 @@ Again, this interpretation of the Laplacian is that involves _no derivatives_, m
 
 $$\text{ }$$
 
----
-
-$$\text{ }$$
-
-Now for the graph Laplacian. In the spirit of [Trevisan](https://www.youtube.com/watch?v=01AqmIU9Su4&ab_channel=SimonsInstitute), we focus on the case of a $d$-regular graph. Fix a $d$-regular graph $(V,E)$, and let $A$ be its adjacency matrix and $I$ the identity matrix. We write column vectors as $x=(x^1,...,x^{|V|})^T$, with superscripts as indices.
+**Graph Laplacian.** Now for the graph Laplacian. In the spirit of [Trevisan](https://www.youtube.com/watch?v=01AqmIU9Su4&ab_channel=SimonsInstitute), we focus on the case of a $d$-regular graph. Fix a $d$-regular graph $(V,E)$, and let $A$ be its adjacency matrix and $I$ the identity matrix. We write column vectors as $x=(x^1,...,x^{|V|})^T$, with superscripts as indices.
 
 $$\text{ }$$
 

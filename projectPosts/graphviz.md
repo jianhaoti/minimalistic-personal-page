@@ -2,7 +2,7 @@
 title: "GraphViz"
 date: "January 2024 - May 2024 "
 tags: ["React", "Next.js", "Typescript", "Javascript", "Node.js"]
-excerpt: "A web app which allow users to create their own graphs, and step-through common graph algorithms alongside its pseudocode."
+description: "A web app which allow users to create their own graphs, and step-through common graph algorithms alongside its pseudocode."
 link: "https://graphvisual.vercel.app/"
 ---
 
@@ -12,4 +12,10 @@ link: "https://graphvisual.vercel.app/"
 
 $$\text{}$$
 
-<video src="/videos/graphVizDemo.mp4" autoplay loop muted playsinline></video>
+<div style="text-align: center;">
+    <video autoplay loop muted playsinline controls width="600">
+        <source src="/videos/graphVizDemo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p><em>Demonstration with BFS</em></p>
+</div>

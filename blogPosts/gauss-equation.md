@@ -3,11 +3,11 @@ title: "Gauss Equation"
 date: "10 February 2025"
 tags: ["geometry", "linear algebra", "Riemannian geometry"]
 excerpt: "
-We take two traces of the Gauss equation to get a scalar relationship between intrinsic and extrinsic curvature quantities.
+We take two traces of the Gauss equation to get a scalar relationship between intrinsic and extrinsic curvature quantities of an embedding.
 "
 ---
 
-Arguably the most fundamental equation of Riemannian geometry is the Gauss equation, which relates instrinsic and extrinsic curvatures of an embedding $\Sigma\subset M$. Here's the full beast.
+The most fundamental equation of Riemannian geometry is the Gauss equation, which relates intrinsic and extrinsic curvatures of an embedding $\Sigma\subset M$. Here's the full beast.
 
 $$\text{ }$$
 
@@ -26,11 +26,15 @@ $$
 $$\text{ }$$
 
 For notation, a quantity with a subscript of $\Sigma$ means that it's associated with the hypersurface $\Sigma$, while no subscript means that it's associated with the ambient manifold $M$. In the above, $Rm$ denotes the $(0,4)$ Riemannian curvature tensor,
-$A(X,Y):=\langle \nabla_X N, Y\rangle$ denotes the second fundamental form, and $N$ denotes a unit normal to $\Sigma$. Later, we use $Ric$ to denote Ricci cuvature, $R$ to denote scalar curvature, and $H:=\sum_{i=1}^{n-1} A(e_i,e_i)$ to denote mean curvature.
+$A(X,Y):=\langle \nabla_X N, Y\rangle$ denotes the second fundamental form, and $N$ denotes a unit normal to $\Sigma$. Later, we use $Ric$ to denote Ricci curvature, $R$ to denote scalar curvature, and $H:=\sum_{i=1}^{n-1} A(e_i,e_i)$ to denote mean curvature.
 
 $$\text{ }$$
 
-Geometers typically find $Rm$ too difficult to study and historically they've reduced complexity by taking traces. We claim that after taking two traces, Gauss reduces to the following formula
+Geometers typically find $Rm$ too difficult to study and historically they've reduced complexity by taking traces. We claim that after taking two traces, Gauss equation reduces to the following scalar formula.
+
+$$\text{ }$$
+
+**Theorem [Gauss]** Under the same assumptions as above,
 
 $$
 \begin{equation}
@@ -61,12 +65,12 @@ $$
 \begin{split}
 R - 2Ric(N,N)&= R_\Sigma- H\underbrace{\bigg(\sum_{j=1}^{n-1} A(e_j,e_j)\bigg)}_{=H}\\
 &+\sum_{i,j=1}^{n-1}  A(e_i,e_j) \underbrace{A(e_j,e_i)}_{=A(e_i,e_j)}.\\
-&=R_\Sigma-H^2+|A|^2.
+&=R_\Sigma-H^2+|A|^2,
 \end{split}
 \end{equation}
 $$
 
-Again, an extra negative term comes in during this second round of trace. The last line follows from the definition of norm for a $(0,2)$-tensor. The exact norm usually matters not, only that $|A|^2$ is a non-negative function. Finally, we show that $A$ is symmetric. We compute
+which gives the result. Again, an extra negative term comes in during this round of trace. The last line follows from the definition of norm for a $(0,2)$-tensor. In applications, particularly those pertaining to rigidity, we usually only care that it is a non-negative function. Finally, we show that $A$ is symmetric. We compute
 
 $$
 \begin{equation}
