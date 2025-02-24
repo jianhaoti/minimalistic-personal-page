@@ -119,7 +119,7 @@ $$
 
 $$\text{}$$
 
-The answer kind of? First, realize that built into Gauss-Markov are stronger assumptions on the errors, but more importantly, the underlying assumption that the true function $f$ is linear in the features. In other words, we assume that
+The answer is kind of? First, realize that built into Gauss-Markov are stronger assumptions on the errors, but more importantly, the underlying assumption that the true function $f$ is linear in the features. In other words, we assume that
 
 $$
 \begin{equation}
