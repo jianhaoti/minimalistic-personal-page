@@ -2,7 +2,7 @@
 title: "Derivation of OLS"
 date: "23 February 2025"
 tags: ["Machine Learning", "Calculus", "Linear Algebra", "Statistics"]
-excerpt: "We formulate and solve OLS as the solution to a minimization problem."
+excerpt: "We formulate and solve for OLS as the solution to a minimization problem."
 ---
 
 **Setup.** The goal of classical linear regression is to obtain the affine function of best fit given training data $(x_1,y_1)$, ... , $(x_m,y_m)$ where $x_i\in \R^n$ and $y_i\in \R$. An affine function $H$ in variable $x=[x^1,...,x^n]$ is specified by $n+1$ parameters $\beta^T=[\beta^0,\beta^1,...,\beta^n]$ by
