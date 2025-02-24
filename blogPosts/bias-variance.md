@@ -1,11 +1,11 @@
 ---
-title: "Bias-Variance, Randomness, and the Gauss-Markov Theorem"
+title: "Bias-Variance, Randomness, and Gauss-Markov"
 date: "22 February 2025"
 tags: ["Machine Learning", "Probability", "Randomness", "Statistics"]
-excerpt: "We use the bias-variance decomposition in machine learning as a backdrop to explore some basic probability-theoretic ways of thinking. We also make a comparison between the bias in Gauss-Markov and in bias-variance."
+excerpt: "We use the bias-variance decomposition in machine learning as a backdrop to explore some probability-theoretic ways of thinking. We also make a comparison between the bias in Gauss-Markov and in bias-variance."
 ---
 
-All the computer scientists I've talked to have a very intuitive grasp of the concept of randomness. This is apparent even from their vocabulary when they use terminology like "sources of randomness". Let's explore this line of thinking.
+All the computer scientists I've talked to have a very intuitive grasp of randomness, which comes through in the language they use. They'll say phrases like "sources of randomness" which reflects a level of comfort that I'd like to achieve. Let's explore this line of thinking.
 
 $$\text{ }$$
 
@@ -119,7 +119,7 @@ $$
 
 $$\text{}$$
 
-The answer is not really? Built into Gauss-Markov are stronger assumptions on the errors, but more importantly, the underlying assumption that the true function $f$ is linear in the features. In other words, we assume that
+The answer kind of? First, realize that built into Gauss-Markov are stronger assumptions on the errors, but more importantly, the underlying assumption that the true function $f$ is linear in the features. In other words, we assume that
 
 $$
 \begin{equation}
@@ -127,7 +127,7 @@ y= X\beta +\epsilon,
 \end{equation}
 $$
 
-for some column vector $\beta$. In OLS, we typically solve for the estimator $\hat{\beta}$ as
+for some column vector $\beta$ and design matrix $X$. In classical OLS, we solve for the estimator $\hat{\beta}$ as
 
 $$
 \begin{equation}
@@ -135,7 +135,7 @@ $$
 \end{equation}
 $$
 
-which will be calculated in a later blog post. The claim that "OLS is unbiased" is usually understood in terms of _parameter estimation_, namely $\mathbb{E}[\hat{\beta}]=\beta$. The proof of this comes from expanding out $\hat{\beta}$ as
+which is calculated in [this blog post](/blog/OLS-derivation). The claim that "OLS is unbiased" is classically understood in terms of _parameter estimation_, namely $\mathbb{E}[\hat{\beta}|X]=\beta$. Note that the design matrix (training data) is seen as a deterministic given. The proof of this comes from expanding out $\hat{\beta}$ as
 
 $$
 \begin{equation}
@@ -160,7 +160,7 @@ $$
 \end{equation}
 $$
 
-What's important here is that that the design matrix $X$ (training data) is seen as deterministic in this calculation. In machine learning, however, we're more interested in predictions. So let's instead view OLS as a _prediction model_. In this case, the bias of OLS is now understood as
+In machine learning, however, we're more interested in predictions. So let's instead view OLS as a _prediction model_. In this case, the bias of OLS is now understood as
 
 $$
 \begin{equation}
