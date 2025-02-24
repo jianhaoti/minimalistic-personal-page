@@ -9,23 +9,25 @@ import "katex/dist/katex.min.css";
 import { notFound } from "next/navigation";
 import rehypeRaw from "rehype-raw";
 
-// Cache for blog posts
-const postCache = new Map<string, { frontMatter: any; content: string }>();
+// ✅ Define the interface for front matter metadata
+interface BlogFrontMatter {
+  title: string;
+  excerpt?: string;
+  date?: string;
+  tags?: string[];
+}
 
-async function getBlogPost(slug: string) {
-  if (postCache.has(slug)) {
-    return postCache.get(slug);
-  }
-
+// ✅ Async function to fetch blog data with explicit types
+async function getBlogPost(
+  slug: string
+): Promise<{ frontMatter: BlogFrontMatter; content: string } | null> {
   const filePath = path.join(process.cwd(), "blogPosts", `${slug}.md`);
 
   try {
     const fileContent = await fs.readFile(filePath, "utf8");
     const { data, content } = matter(fileContent);
 
-    const post = { frontMatter: data, content };
-    postCache.set(slug, post);
-    return post;
+    return { frontMatter: data as BlogFrontMatter, content }; // ✅ Explicitly type `data`
   } catch {
     return null;
   }
@@ -37,8 +39,8 @@ export default async function BlogPost({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
   const post = await getBlogPost(slug);
+
   if (!post) return notFound();
 
   return (
@@ -59,6 +61,3 @@ export default async function BlogPost({
     </div>
   );
 }
-
-// ✅ Enable ISR for better performance
-export const revalidate = 60;
