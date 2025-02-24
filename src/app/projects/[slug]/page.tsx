@@ -3,69 +3,85 @@ import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
-import remarkMath from "remark-math"; // Add this import
-import "katex/dist/katex.min.css"; // Ensure Katex CSS is loaded
+import remarkMath from "remark-math";
+import "katex/dist/katex.min.css";
 import { notFound } from "next/navigation";
 import SideBySideImages from "@/components/SideBySideImages";
 import rehypeRaw from "rehype-raw";
 import Link from "next/link";
+import Image from "next/image"; // ✅ Use Next.js optimized Image
 
-export default async function ProjectPost({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = await params;
+export default function ProjectPost({ params }: { params: { slug: string } }) {
+  if (!params || !params.slug) {
+    return notFound();
+  }
+
+  const { slug } = params; // ✅ No `await` needed
   const filePath = path.join(process.cwd(), "projectPosts", `${slug}.md`);
 
-  // Check if the file exists, or redicted to page not found
+  // ✅ Ensure file exists
   if (!fs.existsSync(filePath)) {
-    notFound();
+    return notFound();
   }
 
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
 
   return (
-    <div>
+    <div className="max-w-3xl mx-auto px-6">
       {/* Header Section */}
       <header className="border-b border-gray-300 pb-8 mb-8">
-        <div className="flex">
-          <h1 className="text-2xl font-bold mb-4">{data.title}</h1>
-          <Link
-            href={data.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 text-gray-600 hover:text-gray-900 text-2xl"
-          >
-            {" "}
-            ↗
-          </Link>
+        <div className="flex items-center">
+          <h1 className="text-3xl font-bold">{data.title}</h1>
+          {data.link && (
+            <Link
+              href={data.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 text-gray-600 hover:text-gray-900 text-2xl"
+            >
+              ↗
+            </Link>
+          )}
         </div>
-        <p className="text-gray-500 text-sm mb-2">{data.excerpt}</p>
+        <p className="text-gray-500 text-sm mb-2">
+          {data.excerpt || data.description}
+        </p>
       </header>
 
-      {/* Project Post */}
-      <article className="prose">
+      {/* Project Content */}
+      <article className="prose max-w-none">
         <ReactMarkdown
-          remarkPlugins={[remarkMath]} // Use remark-math to parse math expressions
-          rehypePlugins={[rehypeKatex, rehypeRaw]} // Render them with rehype-katex
+          remarkPlugins={[remarkMath]}
+          rehypePlugins={[rehypeKatex, rehypeRaw]}
           components={{
+            // ✅ Custom Next.js Image Component for Markdown
             img: ({ src, alt }) => {
-              // Define a case for side-by-side images
+              if (!src) return null; // Ensure src exists
+
+              // ✅ Side-by-side image handling
               if (alt?.includes("|")) {
                 const [src1, caption1, src2, caption2] = alt.split("|");
                 return (
                   <SideBySideImages
                     src1={`/images/${src1.trim()}`}
                     src2={`/images/${src2.trim()}`}
-                    caption1={caption1}
-                    caption2={caption2}
+                    caption1={caption1.trim()}
+                    caption2={caption2.trim()}
                   />
                 );
               }
+
               return (
-                <img src={src || ""} alt={alt || ""} className="mx-auto" />
+                <div className="flex justify-center my-4">
+                  <Image
+                    src={src}
+                    alt={alt || "Project Image"}
+                    width={600} // Adjust as needed
+                    height={400}
+                    className="rounded-lg shadow-md"
+                  />
+                </div>
               );
             },
           }}
