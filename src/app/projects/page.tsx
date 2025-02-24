@@ -1,7 +1,7 @@
 import { getProjectPosts } from "../../lib/posts";
 import Link from "next/link";
 export default async function Projects() {
-  const projects = await getProjectPosts(); // Fetch project posts
+  const projects = getProjectPosts(); // Fetch project posts
 
   return (
     <div>

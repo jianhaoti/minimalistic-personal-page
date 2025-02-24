@@ -1,7 +1,8 @@
 import { getBlogPosts } from "../../lib/posts";
+import Link from "next/link";
 
 export default async function Blog() {
-  const posts = await getBlogPosts(); // Fetch blog posts
+  const posts = getBlogPosts(); // Fetch blog posts
 
   return (
     <div>
@@ -14,12 +15,12 @@ export default async function Blog() {
           </p>
 
           <h2 className="text-lg font-bold">
-            <a
+            <Link
               href={`/blog/${post.slug}`}
               className="no-underline hover:underline"
             >
               {post.title}
-            </a>
+            </Link>
           </h2>
           <p className="text-sm leading-relaxed mt-1">{post.excerpt}</p>
         </article>
