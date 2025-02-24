@@ -1,5 +1,5 @@
 import { getProjectPosts } from "../../lib/posts";
-
+import Link from "next/link";
 export default async function Projects() {
   const projects = await getProjectPosts(); // Fetch project posts
 
@@ -12,21 +12,21 @@ export default async function Projects() {
           </p>
 
           <h2 className="text-lg font-bold">
-            <a
+            <Link
               href={`/projects/${project.slug}`}
               className="no-underline hover:underline"
             >
               {project.title}
-            </a>
+            </Link>
             {project.link && (
-              <a
+              <Link
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2 text-gray-600 hover:text-gray-900"
               >
                 ↗
-              </a>
+              </Link>
             )}
           </h2>
           <p className="text-sm leading-relaxed mt-1">{project.excerpt}</p>
