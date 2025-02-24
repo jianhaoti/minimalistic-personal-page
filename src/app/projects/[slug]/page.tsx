@@ -89,7 +89,7 @@ export default async function ProjectPost({ params }: ProjectPostProps) {
         </article>
       </div>
     );
-  } catch (_) {
+  } catch {
     return notFound(); // ✅ Handle missing projects correctly
   }
 }
