@@ -41,7 +41,7 @@ In the above, f is interpreted as an initial heat distribution, and the solution
 
 $$\text{ }$$
 
-**Formalism.** So why does the Laplacian smooth out data? We can see this with a quick Taylor expansion calculation. In one-dimension (the higher dimensional cases follow similarly), the Laplacian is the second derivative. Consider the Taylor expansion of the function $u$ around the point $p$. That is for $x\in B_r(p)$, we have the expansion
+**Formalism.** Let's justify this intuition with quick Taylor expansion. In one-dimension (the higher dimensional cases follow similarly), the Laplacian is the second derivative. Consider the Taylor expansion of the function $u$ around the point $p$. That is for $x\in B_r(p)$, we have the expansion
 
 $$
 \begin{equation}
