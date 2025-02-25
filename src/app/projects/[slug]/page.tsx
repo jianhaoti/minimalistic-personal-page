@@ -28,7 +28,7 @@ export default async function ProjectPost({ params }: ProjectPostProps) {
     return (
       <div className="max-w-3xl mx-auto px-6">
         {/* Header Section */}
-        <header className="border-b border-gray-300 pb-8 mb-8">
+        <header className="border-b border-gray-300 pb-4 mb-6">
           <div className="flex items-center">
             <h1 className="text-3xl font-bold">{data.title}</h1>
             {data.link && (
