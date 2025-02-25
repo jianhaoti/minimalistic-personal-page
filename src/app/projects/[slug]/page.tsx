@@ -45,6 +45,9 @@ export default async function ProjectPost({ params }: ProjectPostProps) {
           <p className="text-gray-500 text-sm mb-2">
             {data.excerpt || data.description}
           </p>
+          <p className="uppercase text-gray-700 text-xxs font-bold">
+            {data.date}
+          </p>
         </header>
 
         {/* Project Content */}
