@@ -119,7 +119,7 @@ $$
 
 $$\text{}$$
 
-The answer is kind of? First, realize that built into Gauss-Markov are stronger assumptions on the errors, but more importantly, the underlying assumption that the true function $f$ is linear in the features. In other words, we assume that
+First, realize that built into Gauss-Markov are stronger assumptions on the errors, but more importantly, the underlying assumption that the true function $f$ is linear in the features. This restricts your search space to affine functions from the get-go. In other words, we assume that
 
 $$
 \begin{equation}
@@ -127,7 +127,7 @@ y= X\beta +\epsilon,
 \end{equation}
 $$
 
-for some column vector $\beta$ and design matrix $X$. In classical OLS, we solve for the estimator $\hat{\beta}$ as
+for some column vector $\beta$ and design matrix $X$. This resolves the apparent contradiction that arose with the pictures. Now for a discussion of two senses of "bias". In classical OLS, we solve for the estimator $\hat{\beta}$ as
 
 $$
 \begin{equation}
@@ -171,7 +171,7 @@ $$
 \end{equation}
 $$
 
-where we now take expectation over design matrices $X$, and $(x, x^T\hat{\beta})$ is a fixed test point. Note that the design matrix is now random. To show OLS is unbiased in this sense, it follows from the fact that $\mathbb{E}^X[\hat{\beta}]=\beta$. Assuming this, we compute
+where we now take expectation over design matrices $X$, and $(x, x^T\hat{\beta})$ is a fixed test point. Note that the design matrix is now random. To show OLS is unbiased in this sense, it follows from the fact that $\mathbb{E}^X[\hat{\beta}|x]=\beta$. Assuming this, we compute
 
 $$
 \begin{equation}
