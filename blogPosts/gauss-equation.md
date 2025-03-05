@@ -11,7 +11,7 @@ The most fundamental equation of Riemannian geometry is the Gauss equation, whic
 
 $$\text{ }$$
 
-**Theorem [Gauss]** Given a embedding of a hypersurface $\Sigma^{n-1}$ into a Riemannian manifold $M^n$, for vector fields $X,Y,Z,W\in \mathfrak{X}(\Sigma)$,
+**Theorem [Gauss].** _Given a embedding of a hypersurface $\Sigma^{n-1}$ into a Riemannian manifold $M^n$, for vector fields $X,Y,Z,W\in \mathfrak{X}(\Sigma)$,_
 
 $$
 \begin{equation}
@@ -34,7 +34,7 @@ Geometers typically find $Rm$ too difficult to study and historically they've re
 
 $$\text{ }$$
 
-**Theorem [Gauss]** Under the same assumptions as above,
+**Theorem [Gauss].** _Under the same assumptions as above,_
 
 $$
 \begin{equation}
@@ -46,7 +46,7 @@ $$
 
 $$\text{ }$$
 
-To this end, we will take traces _wrt_ an orthonormal frame $E:=\{e_1,...,e_{n-1}\}$ along $\Sigma$. We first take a single trace in the $X,W$ slots to get
+<u>Proof:</u> To this end, we will take traces _wrt_ an orthonormal frame $E:=\{e_1,...,e_{n-1}\}$ along $\Sigma$. We first take a single trace in the $X,W$ slots to get
 
 $$
 \begin{equation}

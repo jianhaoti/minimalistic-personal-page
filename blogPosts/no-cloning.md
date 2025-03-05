@@ -11,9 +11,7 @@ The no cloning theorem is traditionally stated in terms of unitary operators. In
 
 $$\text{ }$$
 
-**Theorem**
-
-The mapping $\Delta: V \to V \otimes V$
+**Theorem.** _The mapping $\Delta: V \to V \otimes V$_
 
 $$
 \begin{equation}
@@ -21,11 +19,11 @@ v \mapsto v \otimes v
 \end{equation}
 $$
 
-of sending an element to the diagonal is _not_ a linear transformation.
+_of sending an element to the diagonal is *not* a linear transformation._
 
 $$\text{ }$$
 
-_Proof:_ Suppose otherwise, and consider the mapping on $u + v$. We compute:
+<u>Proof:</u> Suppose otherwise, and consider the mapping on $u + v$. We compute:
 
 $$
 \begin{equation}
