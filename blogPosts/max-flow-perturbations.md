@@ -24,7 +24,7 @@ $$
 \end{equation}
 $$
 
-In particular, note that the factor $k\alpha$ counts of the number of edges between a cut, up to a scaling factor of $\alpha$. However, for the same reason, minimality may be destroyed. Consider the case where we have a cut with a single edge of capacity $d$ in $G$, and a best min cut has capacity $c$ and $k$ edges. Therefore, $c\leq d$ in $G$. However, looking at the value of these cuts in $G+\alpha$, it is no longer true that the inequality
+Note the term $k\alpha$ counts of the number of edges between a cut, up to a scaling factor of $\alpha$. However, for the same reason, minimality may be destroyed. Consider the case where we have a cut with a single edge of capacity $d$ in $G$, and a best min cut has capacity $c$ and $k$ edges. Therefore, $c\leq d$ in $G$. However, looking at the value of these cuts in $G+\alpha$, it is no longer true that the inequality
 
 $$
 \begin{equation}
@@ -41,9 +41,9 @@ For concreteness, we pin down additive the scaling factor as $\alpha=1$, and it 
 $$
 \begin{equation}
 \begin{split}
-val_{H}(D)=(|E|+1)d+\ell&> (|E|+1)d\\
+val_{H}(D)=(|E|+1)d+\ell&\geq (|E|+1)d\\
 &\geq(|E|+1)(c+1)\\
-&> (|E|+1)c + |E|\\
+&\geq (|E|+1)c + |E|\\
 &\geq val_H(C),
 \end{split}
 \end{equation}
