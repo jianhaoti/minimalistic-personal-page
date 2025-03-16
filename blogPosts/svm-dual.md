@@ -54,7 +54,7 @@ Taking a derivative in the $b$th direction gives
 
 $$
 \begin{equation}
-0=\frac{\partial \mathcal{L}}{\partial b}=\sum_{i=1}
+0=\frac{\partial \mathcal{L}}{\partial b}=-\sum_{i=1}
 ^m \alpha_iy_i.
 \end{equation}
 $$
@@ -65,6 +65,7 @@ $$
 \begin{equation}
 \begin{split}
 0=\frac{\partial \mathcal{L}}{\partial \epsilon_j}&=C\frac{\partial}{\partial \epsilon_j}\sum_{i=1}^m \epsilon_i- \frac{\partial}{\partial \epsilon_j}\sum_{i=1}^m \alpha_i\epsilon_i- \frac{\partial}{\partial \epsilon_j} \sum_{i=1}^m \beta_i\epsilon_i\\
+&=C\sum_{i=1}^m\delta_{ij}-\sum_{i=1}^m\alpha_i\delta_{ij}-\sum_{i=1}^m\beta_i\delta_{ij}\\
 &=C-\alpha_j-\beta_j.
 \end{split}
 \end{equation}
@@ -86,8 +87,8 @@ $$
 \max_{\alpha,\beta} \mathcal{L}^* &= \max_{\alpha}\frac{1}{2} \left\|\sum_{i=1}^m \alpha_i y_i x_i \right\|^2+ \underbrace{C\sum_{i=1}^m\epsilon_i}_{(*)}- \sum_{i=1}^m (\underbrace{C}_{(*)}-\underbrace{\alpha_i}_{(**)}) \epsilon_i\\
 &\quad \quad +\sum_{i=1}^m \alpha_i \underbrace{- \sum_{i=1}^m \alpha_i\epsilon_i}_{(**)} - \sum_{i=1}^m \alpha_iy_i(w^Tx_i+\cancel{b})\\
 
-&=\max_\alpha \frac{1}{2} \sum_{i,j=1}^m \alpha_i \alpha_j y_i y_j x_i^T x_j + \sum_{i=1}^m \alpha_i
-- \sum_{i=1}^m \alpha_i y_i \left(\sum_{j=1}^m \alpha_j y_j x_j^T \right)x_i\\
+&=\max_\alpha \frac{1}{2} \sum_{i,j=1}^m \alpha_i \alpha_j y_i y_j x_i^T x_j + \sum_{i=1}^m \alpha_i\\
+&\quad \quad - \sum_{i=1}^m \alpha_i y_i \left(\sum_{j=1}^m \alpha_j y_j x_j^T \right)x_i\\
 
 &=\max_\alpha -\frac{1}{2} \sum_{i,j=1}^m \alpha_i \alpha_j y_i y_j x_i^T x_j + \sum_{i=1}^m \alpha_i\\
 &=\min_\alpha \frac{1}{2} \sum_{i,j=1}^m \alpha_i \alpha_j y_i y_j x_i^T x_j - \sum_{i=1}^m \alpha_i\\
