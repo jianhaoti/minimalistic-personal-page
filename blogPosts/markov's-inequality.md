@@ -7,30 +7,30 @@ We record a simple proof of Markov's inequality via indicator functions, then di
 "
 ---
 
-Markov's inequality is fundamentally a statement about indicator functions of superlevel sets. Given a non-negative function $f:X\to \mathbb{R}^{\geq 0}$ and a number $\lambda>0$, consider the superlevel set $S_\lambda$ defined by
+Markov's inequality is fundamentally a statement about indicator functions of superlevel sets. Given a non-negative function $f:X\to \mathbb{R}^{\geq 0}$ and a number $t>0$, consider the superlevel set $S_t$ defined by
 
 $$
 \begin{equation}
-S_\lambda:=\{x: f(x)\geq \lambda\}.
+S_t:=\{x: f(x)\geq t\}.
 \end{equation}
 $$
 
-It is clear, by construction, the minimum that $f$ can take on $S_\lambda$ is $\lambda$. In other words, on $S_\lambda$,
+It is clear, by construction, the minimum that $f$ can take on $S_t$ is $t$. In other words, on $S_t$,
 
 $$
 \begin{equation}
-f \geq \lambda.
+f \geq t.
 \end{equation}
 $$
 
-If we partition $X=S_\lambda \sqcup (S_\lambda)^c$, then we can convert (2) into an inequality on $X$ by
+If we partition $X=S_t \sqcup (S_t)^c$, then we can convert (2) into an inequality on $X$ by
 
 $$
 \begin{equation}
 f \geq \begin{cases}
-\lambda & \text{in } S_\lambda\\
-0 & \text{in } (S_\lambda)^c
-\end{cases}= \lambda 𝟙_{S_\lambda},
+t & \text{in } S_t\\
+0 & \text{in } (S_t)^c
+\end{cases}= t 𝟙_{S_t},
 \end{equation}
 $$
 
@@ -38,19 +38,19 @@ where $𝟙_S$ denotes the indicator function of the set $S$. Let $\mu$ denote t
 
 $$
 \begin{equation}
-\int_X f\geq \lambda \int_X  𝟙_{S_\lambda} = \lambda \mu(S_\lambda).
+\int_X f\geq t \int_X  𝟙_{S_t} = t \mu(S_t).
 \end{equation}
 $$
 
-Dividing through by $\lambda$ yields [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality). When $\mu=\mathbb{P}$ is a probability measure, we can intepret this as a weak tail bound. The statement is for non-negative random variable $X\geq 0$ with finite mean $\mu=E[X]$,
+Dividing through by $t$ yields [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality). When $\mu=\mathbb{P}$ is a probability measure, we can intepret this as a weak tail bound. For a non-negative random variable $X\geq 0$ with finite mean $\mu=E[X]$,
 
 $$
 \begin{equation}
-\mathbb{P}(X\geq t) \leq \frac{\mu}{t} = O(t^{-1}).
+\mathbb{P}(|X-\mu|\geq t) \leq \frac{\mathbb{E}|X-\mu|}{t} = O(t^{-1}).
 \end{equation}
 $$
 
-This isn't immediately interpretable since it's not even normalized at the mean. We could replace $X$ by $|X-\mu|$, but actually squaring this quantity and using the second moment yields an even tighter bound which gives a quadratic decay at infinity. Therefore, we additionally assume that $X$ has finite variance. The key insight is that
+Let's begin improving this. Using the second moment yields an even tighter bound that gives a quadratic decay at infinity. Therefore, we additionally assume that $X$ has finite variance. The key insight is that
 
 $$
 \begin{equation}
@@ -71,7 +71,7 @@ $$
 \end{equation}
 $$
 
-Our Pavlovian reaction to witnessing Chebyshev's inequality is to try higher and higher central moments in order to improve the polynomial decay. Chernoff does us one better by getting a exponential bound using _all_ the central moments at once via the exponential function $\exp(z)=\sum_{k=1}^\infty \frac{z^k}{k!}$. We additionally assume the mgf of $X$ is defined in a neighborhood of $0$, and let $s\geq 0$ be a small enough free parameter. Then,
+Our Pavlovian reaction to witnessing Chebyshev's inequality is to try higher and higher central moments in order to improve the polynomial decay. Chernoff does us one better by obtaining an exponential bound using _all_ the central moments at once via the exponential function $\exp(z)=\sum_{k=1}^\infty \frac{z^k}{k!}$. We additionally assume the mgf of $X$ is defined in a neighborhood of $0$, and let $s\geq 0$ be a small enough free parameter. Then,
 
 $$
 \begin{equation}
