@@ -1,9 +1,9 @@
 ---
-title: "Simple Proofs of Markov's and Chebyshev's"
+title: "The Russian Tail Bounds"
 date: "16 March 2025"
 tags: ["Probability", "Measure Theory", "Analysis"]
 excerpt: "
-We record a proofs of Markov's and Chebyshev's inequalities via indicator functions.
+We record a simple proof of Markov's inequality via indicator functions, then discuss how how to tighten it using various transformations.
 "
 ---
 
@@ -42,7 +42,7 @@ $$
 \end{equation}
 $$
 
-Dividing through by $\lambda$ yields Markov's inequality. When $\mu=\mathbb{P}$ is a probability measure, we can intepret this as a weak tail bound. The statement is for non-negative random variable $X\geq 0$ with finite mean $\mu=E[X]$,
+Dividing through by $\lambda$ yields [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality). When $\mu=\mathbb{P}$ is a probability measure, we can intepret this as a weak tail bound. The statement is for non-negative random variable $X\geq 0$ with finite mean $\mu=E[X]$,
 
 $$
 \begin{equation}
@@ -50,7 +50,7 @@ $$
 \end{equation}
 $$
 
-This isn't very good since it's not even normalized at the mean. We could replace $X$ by $|X-\mu|$, but actually squaring this quantity and using the second moment yields a tighter bound, giving a quadratic decay at infinity. Therefore we additionally assume that $X$ has finite variance. The key insight is that
+This isn't immediately interpretable since it's not even normalized at the mean. We could replace $X$ by $|X-\mu|$, but actually squaring this quantity and using the second moment yields an even tighter bound which gives a quadratic decay at infinity. Therefore, we additionally assume that $X$ has finite variance. The key insight is that
 
 $$
 \begin{equation}
@@ -58,7 +58,7 @@ $$
 \end{equation}
 $$
 
-since squaring is monotonically increasing. Apply $\mathbb{P}$ to (6) and using Markov's inequality yields Chebyshev's inequality
+since squaring is monotonically increasing. Apply $\mathbb{P}$ to (6) and using Markov's inequality yields [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality)
 
 $$
 \begin{equation}
@@ -70,3 +70,20 @@ $$
 \end{split}
 \end{equation}
 $$
+
+Our Pavlovian reaction to witnessing Chebyshev's inequality is to try higher and higher central moments in order to improve the polynomial decay. Chernoff does us one better by getting a exponential bound using _all_ the central moments at once via the exponential function $\exp(z)=\sum_{k=1}^\infty \frac{z^k}{k!}$. We additionally assume the mgf of $X$ is defined in a neighborhood of $0$, and let $s\geq 0$ be a small enough free parameter. Then,
+
+$$
+\begin{equation}
+\begin{split}
+\mathbb{P}(X-\mu\geq t) &=\mathbb{P}(\exp(s(X-\mu))\geq \exp(st))\\
+&\leq \frac{\mathbb{E}[\exp(s(X-\mu))]}{\exp(st)}\\
+&\leq \frac{\exp(\mathbb{E}[s(X-\mu)])}{\exp(st)}\\
+&= \frac{\exp(s(\mathbb{E}[X]-\mu))}{\exp(st)}\\
+&= \exp(-s(\mu+t))\exp(s E[X])\\
+&=O(\exp(-t)),
+\end{split}
+\end{equation}
+$$
+
+where the third line is [Jensen's inequality](https://en.wikipedia.org/wiki/Jensen%27s_inequality). Minimizing over $s$ in the domain where the mgf of $X$ is defined yields [Chernoff's inequality](https://en.wikipedia.org/wiki/Chernoff_bound). It's important to note that we've dropped the absolute value in the discussion of Chernoff, so this is really a 1-sided bound, i.e. we implicitly assumed that $X$ lies above its mean.
