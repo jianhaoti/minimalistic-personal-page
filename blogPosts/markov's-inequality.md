@@ -71,7 +71,7 @@ $$
 \end{equation}
 $$
 
-Our Pavlovian reaction to witnessing Chebyshev's inequality is to try higher and higher central moments in order to improve the polynomial decay. Chernoff does us one better by obtaining an exponential bound using _all_ the central moments at once via the exponential function $\exp(z)=\sum_{k=1}^\infty \frac{z^k}{k!}$. We additionally assume the mgf of $X$ is defined in a neighborhood of $0$, and let $s\geq 0$ be a small enough free parameter. Then,
+Our Pavlovian reaction to witnessing Chebyshev's inequality is to try higher and higher central moments in order to improve the polynomial decay. Chernoff does us one better by obtaining an exponential bound using _all_ the central moments at once via the exponential function $\exp(z)=\sum_{k=1}^\infty \frac{z^k}{k!}$. We additionally assume the mgf of $X$ is defined in a neighborhood of $0$, and let $s> 0$ be a small enough free parameter. Then,
 
 $$
 \begin{equation}
