@@ -78,12 +78,11 @@ $$
 \begin{split}
 \mathbb{P}(X-\mu\geq t) &=\mathbb{P}(\exp(s(X-\mu))\geq \exp(st))\\
 &\leq \frac{\mathbb{E}[\exp(s(X-\mu))]}{\exp(st)}\\
-&\leq \frac{\exp(\mathbb{E}[s(X-\mu)])}{\exp(st)}\\
-&= \frac{\exp(s(\mathbb{E}[X]-\mu))}{\exp(st)}\\
-&= \exp(-s(\mu+t))\exp(s E[X])\\
-&=O(\exp(-t)),
+&= \frac{\mathbb{E}[\frac{\exp(sX)}{\exp(s\mu)}]}{\exp(st)}\\
+&= \exp(-s(\mu+t))\mathbb{E}[\exp(sX)]\\
+&=O(\exp(-t)).
 \end{split}
 \end{equation}
 $$
 
-where the third line is [Jensen's inequality](https://en.wikipedia.org/wiki/Jensen%27s_inequality). Minimizing over $s$ in the domain where the mgf of $X$ is defined yields [Chernoff's inequality](https://en.wikipedia.org/wiki/Chernoff_bound). It's important to note that we've dropped the absolute value in the discussion of Chernoff, so this is really a 1-sided bound, i.e. we implicitly assumed that $X$ lies above its mean.
+Note that in the fourth line, all the randomness is concnetrated in $X$, allowing us to pull out the $\exp(s\mu)$. Minimizing over $s$ in the domain where the mgf of $X$ is defined yields [Chernoff's inequality](https://en.wikipedia.org/wiki/Chernoff_bound). It's important to note that we've dropped the absolute value in the discussion of Chernoff, so this is really a 1-sided bound, i.e. we implicitly assumed that $X$ lies above its mean.
