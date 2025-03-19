@@ -15,7 +15,7 @@ We open with a seemingly unrelated lemma. In time, we will see that this lemma i
 
 $$\text{}$$
 
-**Lemma.** _On a bounded domain $(\Omega,\mu)$, for $q\geq p$ we have the inclusion $L^p(\Omega,\mu)\subset L^q(\Omega,\mu)$. In fact, up to a constant $C=C(\mu(\Omega),p,q)$ which is independent of the dimension,_
+**Lemma.** _On a bounded domain $(\Omega,\mu)$, for $q\geq p$ we have the inclusion $L^q(\Omega,\mu)\subset L^p(\Omega,\mu)$. In fact, up to a constant $C=C(\mu(\Omega),p,q)$ which is independent of the dimension,_
 
 $$
 \|f\|_p\leq C \|f\|_q.
