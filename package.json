@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.21",
     "next": "15.1.6",
