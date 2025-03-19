@@ -35,11 +35,11 @@ Taking $p$-th roots gives the claim.
 
 $$\text{}$$
 
-Actually, for our purposes, we'll need to control only the variance of a function $Y$. In this case, we can achieve a (usually) sharper constant of $1$. For this, we only need the convexity of the $q$-norms.
+Actually, for our purposes, we'll need to control only the variance of a random variable $Y$. In this case, we can achieve a (usually) sharper constant of $1$. For this, we only need the convexity of the $q$-norms.
 
 $$\text{}$$
 
-**Lemma.** _For a random variable $Y\in L^q(X)$ with $q\geq 2$, we have_
+**Lemma.** _For a random variable $Y\in L^q$ with $q\geq 2$, we have_
 
 $$
 \begin{equation}
