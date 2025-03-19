@@ -58,7 +58,7 @@ $$
 \end{equation}
 $$
 
-since squaring is monotonically increasing. Apply $\mathbb{P}$ to (6) and using Markov's inequality yields [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality)
+since squaring is monotonically increasing. Applying $\mathbb{P}$ to (6) and using Markov's inequality yields [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality)
 
 $$
 \begin{equation}

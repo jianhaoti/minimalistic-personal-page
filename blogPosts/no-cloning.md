@@ -23,7 +23,7 @@ _of sending an element to the diagonal is *not* a linear transformation._
 
 $$\text{ }$$
 
-<u>Proof:</u> Suppose otherwise, and consider the mapping on $u + v$. We compute:
+<u>Proof.</u> Suppose otherwise, and consider the mapping on $u + v$. We compute:
 
 $$
 \begin{equation}

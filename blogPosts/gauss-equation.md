@@ -46,7 +46,7 @@ $$
 
 $$\text{ }$$
 
-<u>Proof:</u> To this end, we will take traces _wrt_ an orthonormal frame $E:=\{e_1,...,e_{n-1}\}$ along $\Sigma$. We first take a single trace in the $X,W$ slots to get
+<u>Proof.</u> To this end, we will take traces _wrt_ an orthonormal frame $E:=\{e_1,...,e_{n-1}\}$ along $\Sigma$. We first take a single trace in the $X,W$ slots to get
 
 $$
 \begin{equation}
