@@ -61,10 +61,18 @@ Note that we've chosen this normalization so it has mean $0$ and varaince $1$ wh
 
 $$\text{}$$
 
-**Theorem [Hoeffding].** _Suppose $X_1,...,X_n$ are bounded random variables such that $X_i\in [a_i,b_i]$ Then,_
+**Theorem [Hoeffding].** _Suppose $X_1,...,X_n$ are bounded random variables such that $X_i\in [a_i,b_i]$. Then,_
 
 $$
 \begin{equation}
 \mathbb{P}\left(\frac{1}{\sqrt{n}}\sum_{i=1}^n(X_i-\mathbb{E}X_i)\geq t\right)\leq \exp\left(-\frac{2nt^2}{\sum_{i=1}^n (b_i-a_i)^2}\right).
+\end{equation}
+$$
+
+_In particular, if all $X_i$ are drawn from the same distribution, have mean $0$, and $X_i\in[a,b]$, then_
+
+$$
+\begin{equation}
+\mathbb{P}\left(\frac{1}{\sqrt{n}}\sum_{i=1}^nX_i\geq t\right)\leq \exp\left(-\frac{2t^2}{(b-a)^2}\right).
 \end{equation}
 $$
