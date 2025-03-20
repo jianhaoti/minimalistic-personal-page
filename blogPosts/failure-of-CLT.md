@@ -57,7 +57,7 @@ $$
 \end{equation}
 $$
 
-Even worse for us, the asymptotics of Berry-Esseen are actually sharp, by considering specific binomial distributions. To circumvent this issue, we develop [Hoeffding's inequality](/blog/mgf-gaussian) which will directly give an exponential tail bound.
+Note that we've chosen this normalization so it has mean $0$ and varaince $1$ which makes it comprable to $\mathcal{N}(0,1)$. The asymptotics of Berry-Esseen are actually sharp, by considering specific binomial distributions. To circumvent this issue, we develop [Hoeffding's inequality](/blog/mgf-gaussian) which will directly give an exponential tail bound.
 
 $$\text{}$$
 
@@ -65,6 +65,6 @@ $$\text{}$$
 
 $$
 \begin{equation}
-\mathbb{P}\left(\sum_{i=1}^nX_i-\mathbb{E}X_i \geq t\right)\leq \exp\left(-\frac{2t^2}{\sum_{i=1}^n (b_i-a_i)^2}\right).
+\mathbb{P}\left(\frac{1}{\sqrt{n}}\sum_{i=1}^n(X_i-\mathbb{E}X_i)\geq t\right)\leq \exp\left(-\frac{2nt^2}{\sum_{i=1}^n (b_i-a_i)^2}\right).
 \end{equation}
 $$
