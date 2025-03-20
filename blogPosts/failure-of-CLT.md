@@ -65,6 +65,6 @@ $$\text{}$$
 
 $$
 \begin{equation}
-\mathbb{P}\left(\sum_{i=1}^nX_i-\mathbb{E}X_i \geq t\right)\leq \exp\left(-\frac{2t^2}{\sum_{i=1}^n (b_i-a_i)^2}\right)
+\mathbb{P}\left(\sum_{i=1}^nX_i-\mathbb{E}X_i \geq t\right)\leq \exp\left(-\frac{2t^2}{\sum_{i=1}^n (b_i-a_i)^2}\right).
 \end{equation}
 $$
