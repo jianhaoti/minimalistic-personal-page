@@ -103,16 +103,8 @@ This tells us that a maximum to (6) is an eigendirection of $C$. We define a _pr
 
 $$
 \begin{equation}
-p^TCp=p^T(\lambda p)=\lambda,
+\mathbb{V}_p[y]=p^TCp=p^T(\lambda p)=\lambda,
 \end{equation}
 $$
 
-so maximizing for the eigenvalue $\lambda$ corresponds to maximizing for the sample variance. Indicidentally, plugging in eigendirection $p$ into (5) gives
-
-$$
-\begin{equation}
-\mathbb{V}_p[y]=p^TCp=\lambda.
-\end{equation}
-$$
-
-This implies that the covariance matrix $C$ is a positive semi-definite matrix, since variance is a non-negative quantity.
+so maximizing for the eigenvalue $\lambda$ corresponds to maximizing for the sample variance. Indicidentally, the same computation shows that the covariance matrix $C$ is a positive semi-definite matrix, since variance is a non-negative quantity.
