@@ -2,10 +2,10 @@
 title: "Principal Component Analysis"
 date: "24 March 2025"
 tags: ["statistics", "linear algebra", "measure theory"]
-excerpt: "We discuss some very basic ideas from emperical processes and use them to motivate PCA."
+excerpt: "We discuss some very basic ideas from empirical processes and use them to motivate PCA."
 ---
 
-**Measure Theory.** What's the most natural probability measure associated to a sample $x_1,...,x_m\in \R^n$? The easiest, most unbiased way is to treat these points as your entire measure space with the uniform measure. For simplicity, take $n=1$ so that we're dealing with random variables. Define take the Dirac measure on $x_i$ as $𝟙_{j}:=𝟙_{x_j}$ and we define the _emperical measure_ on $\mathbb{R}$ as
+**Measure Theory.** What's the most natural probability measure associated to a sample $x_1,...,x_m\in \R^n$? The easiest, most unbiased way is to treat these points as your entire measure space with the uniform measure. For simplicity, take $n=1$ so that we're dealing with random variables. Define take the Dirac measure on $x_i$ as $𝟙_{j}:=𝟙_{x_j}$ and we define the _empirical measure_ on $\mathbb{R}$ as
 
 $$
 \begin{equation}
@@ -96,7 +96,7 @@ $$
 \end{equation}
 $$
 
-This tells us that a maximum to (6) is an eigendirection to $C$. We define a _principal direction_ $p_1$ as the direction with the largest eigenvalue $\lambda_1$. We claim that $p_1$ solves the optimization problem (5). This is because
+This tells us that a maximum to (6) is an eigendirection of $C$. We define a _principal direction_ $p_1$ as the direction with the largest eigenvalue $\lambda_1$. We claim that $p_1$ solves the optimization problem (5). This is because
 
 $$
 \begin{equation}
