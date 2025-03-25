@@ -4,29 +4,36 @@ import matter from "gray-matter";
 
 const baseDirectory = process.cwd(); // Base directory for Markdown files
 
-// Function for fetching blog posts
+// Function for fetching blog posts [FROM TWO DIFFERNET DIRECTORIES!]
 export function getBlogPosts() {
-  const postsDirectory = path.join(baseDirectory, "blogPosts");
-  const filenames = fs.readdirSync(postsDirectory);
+  const postsDirectories = [
+    path.join(baseDirectory, "blogPosts"),
+    path.join(baseDirectory, "blogDrafts"),
+  ];
 
-  const posts = filenames.map((filename) => {
-    const filePath = path.join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(filePath, "utf8");
-    const { data } = matter(fileContents);
+  const posts = postsDirectories.flatMap((directory) => {
+    if (!fs.existsSync(directory)) return [];
 
-    return {
-      slug: filename.replace(".md", ""),
-      title: data.title,
-      date: new Date(data.date), // Convert to Date object for proper sorting
-      tags: data.tags,
-      excerpt: data.excerpt,
-    };
+    const filenames = fs.readdirSync(directory);
+
+    return filenames.map((filename) => {
+      const filePath = path.join(directory, filename);
+      const fileContents = fs.readFileSync(filePath, "utf8");
+      const { data } = matter(fileContents);
+
+      return {
+        slug: filename.replace(".md", ""),
+        title: data.title,
+        date: new Date(data.date), // Date object
+        tags: data.tags,
+        excerpt: data.excerpt,
+        isDraft: directory.includes("Draft"), // optional: flag as draft
+      };
+    });
   });
 
-  // Sort blog posts by date in descending order
   return posts.sort((a, b) => b.date.getTime() - a.date.getTime());
 }
-
 // Function for fetching project posts
 export function getProjectPosts() {
   const postsDirectory = path.join(baseDirectory, "projectPosts");
