@@ -99,7 +99,7 @@ $$
 \end{equation}
 $$
 
-This tells us that a maximum to (6) is an eigendirection of $C$. We define a _principal direction_ $p_1$ as the eigendirection with the largest eigenvalue $\lambda_1$. We claim that $p_1$ solves the optimization problem (5). This is because
+This tells us that a maximum to (6) is an eigendirection of $C$. We define a _principal direction_ $p_1$ as an eigendirection with the largest eigenvalue $\lambda_1$. We claim that $p_1$ solves the optimization problem (5). This is because
 
 $$
 \begin{equation}

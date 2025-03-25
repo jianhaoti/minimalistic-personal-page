@@ -57,7 +57,7 @@ $$
 \end{equation}
 $$
 
-Note that we've chosen this normalization so it has mean $0$ and varaince $1$ which makes it comprable to $\mathcal{N}(0,1)$. The asymptotics of Berry-Esseen are actually sharp, by considering specific binomial distributions. To circumvent this issue, we develop [Hoeffding's inequality](/blog/mgf-gaussian) which will directly give an exponential tail bound.
+Note that we've chosen this normalization so it has mean $0$ and varaince $1$ which makes it comprable to $\mathcal{N}(0,1)$. The asymptotics of Berry-Esseen are actually sharp, by considering specific binomial distributions. To circumvent this issue, we develop [Hoeffding's inequality](/blog/hoeffding) which will directly give an exponential tail bound.
 
 $$\text{}$$
 
