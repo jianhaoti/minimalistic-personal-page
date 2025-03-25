@@ -5,29 +5,29 @@ tags: ["statistics", "linear algebra", "measure theory"]
 excerpt: "We discuss some very basic ideas from empirical processes and use them to motivate PCA."
 ---
 
-**Measure Theory.** What's the most natural probability measure associated to a sample $x_1,...,x_m\in \R^n$? The easiest, most unbiased way is to treat these points as your entire measure space with the uniform measure. For simplicity, take $n=1$ so that we're dealing with random variables. Define take the Dirac measure $𝟙_{j}:=𝟙_{x_j}$ and we define the _empirical measure_ on $\mathbb{R}$ as
+**Measure Theory.** What's the most natural probability measure associated to a sample $x_1,...,x_m\in \R^n$? The easiest, most unbiased way is to treat these points as your entire measure space with the uniform measure. For simplicity, take $n=1$ so that we're dealing with random variables. We take the Dirac measure $𝟙_{x_j}$ for each data point $x_j$ and define the _empirical measure_ on $\mathbb{R}$ as
 
 $$
 \begin{equation}
-\mathbb{P}_{\mathbb{X}}:=\frac{1}{m}\sum_{j=1}^m 𝟙_{j},
+\mathbb{P}_{\mathbb{X}}:=\frac{1}{m}\sum_{j=1}^m 𝟙_{x_j},
 \end{equation}
 $$
 
-where we set $\mathbb{X}:=\{x_1,...,x_m\}$. Let's compute its expectation and variance. Let $x\sim\mathbb{P}_\mathbb{X}$. We compute its _sample expecation_ as
+where we set $\mathbb{X}:=\{x_1,...,x_m\}$. Let's compute the expectation and variance of this distribution. Let $x\sim\mathbb{P}_\mathbb{X}$. We compute the _sample expecation_ as
 
 $$
 \begin{equation}
 \begin{split}
 \mathbb{E}[x]&=\sum_{i=1}^m x_i \mathbb{P}_\mathbb{X}(x=x_i) \\
 &=\sum_{i=1}^m x_i \mathbb{P}_\mathbb{X}(x_i) \\
-&=\sum_{i=1}^m x_i \left(\frac{1}{m}\sum_{j=1}^m𝟙_{j}(x_i)\right)\\
+&=\sum_{i=1}^m x_i \left(\frac{1}{m}\sum_{j=1}^m𝟙_{x_j}(x_i)\right)\\
 &=\sum_{i=1}^m x_i\left(\frac{1}{m}\sum_{j=1}^m\delta_{ij}\right)\\
 &=\frac{1}{m}\sum_{i=1}^m x_i.
 \end{split}
 \end{equation}
 $$
 
-Under this measure, the expected value yields the center-of-mass. Therefore, we set $\bar{x}=\mathbb{E}[x]$. Next, we compute the _sample variance_ of $x$ as
+Under this measure, the expected value yields the center-of-mass. Therefore, we set $\bar{x}=\mathbb{E}[x]$. Next, we compute the _sample variance_ as
 
 $$
 \begin{equation}
@@ -43,8 +43,8 @@ We mention that the second equality in the calculation of the variance relies on
 
 $${}$$
 
-**PCA.** The goal is to find directions $p_1,...,p_n\in \mathbb{S}^{n-1}\subset \R^n$ in which the data has maximal spread. Data spread will be quantified by sample variance as discussed in the previous section. Let $y_i:=p\cdot x_i$ be the projection of $x_i$ in the direction of $p$.
-Our goal, therefore, is to find directions to maximize sample variance $\mathbb{Y}=\{y_1,...,y_m\}$. This is formalized by the optimization problem
+**PCA.** The goal is to find a direction $p\in \mathbb{S}^{n-1}\subset \R^n$ in which the data has maximal spread. Since data spread is a purely empirical notion, we quantify it à la sample variance. Let $y_i:=p\cdot x_i$ be the projection of $x_i$ in the direction of $p$.
+Our goal, therefore, is to find a direction that maximizes the sample variance $\mathbb{Y}=\{y_1,...,y_m\}$. This is formalized by the optimization problem
 
 $$
 \begin{equation}
@@ -55,7 +55,7 @@ $$
 \end{equation}
 $$
 
-for $y\sim \mathbb{P}_\mathbb{Y}$, the emperical distribution over the projected points. The subscript on the variance emphasizes that it's computed after projection in the direction of $p$. Our first goal is to expand out $\mathbb{V}_p$ as a quadratic form.
+for $y\sim \mathbb{P}_\mathbb{Y}$ the emperical distribution over the projected points. The subscript on the variance emphasizes that this is a post-projection computation. Our first goal is to expand out $\mathbb{V}_p$ as a quadratic form.
 
 $$
 \begin{equation}
@@ -80,11 +80,14 @@ $$
 \end{equation}
 $$
 
-and this can be solved with Lagrange mulitpliers. Our objective function and constraints together define the Lagrangian
+which can be solved with Lagrange mulitpliers. Our objective function and constraint together define the Lagrangian
 
 $$
 \begin{equation}
-\frac{1}{2}p^TCp-\lambda(p^Tp-1)=p^TC-\lambda I p+\lambda
+\begin{split}
+\mathcal{L}(p,\lambda)&=p^TCp-\lambda(p^Tp-1)\\
+&=p^T(C-\lambda I )p+\lambda
+\end{split}
 \end{equation}
 $$
 
@@ -92,11 +95,11 @@ which has $p$-critical points at
 
 $$
 \begin{equation}
-0= (C-\lambda I)p.
+0= \frac{\partial \mathcal{L}}{\partial p}(p)=(C-\lambda I)p.
 \end{equation}
 $$
 
-This tells us that a maximum to (6) is an eigendirection of $C$. We define a _principal direction_ $p_1$ as the direction with the largest eigenvalue $\lambda_1$. We claim that $p_1$ solves the optimization problem (5). This is because
+This tells us that a maximum to (6) is an eigendirection of $C$. We define a _principal direction_ $p_1$ as the eigendirection with the largest eigenvalue $\lambda_1$. We claim that $p_1$ solves the optimization problem (5). This is because
 
 $$
 \begin{equation}
