@@ -99,7 +99,7 @@ $$
 \end{equation}
 $$
 
-This tells us that a maximum to (6) is an eigendirection of $C$. We define a _principal direction_ $p_1$ as an eigendirection with the largest eigenvalue $\lambda_1$. We claim that $p_1$ solves the optimization problem (5). This is because
+This tells us that a maximum to (6) is an eigendirection of $C$. At this point there's an ambiguity in the sign of $\lambda$, since the contraints are equality constraints. We will fix this ambiguity later. We define a _first principal direction_ $p_1$ as an eigendirection with the largest eigenvalue $\lambda_1$. We claim that $p_1$ solves the optimization problem (5). This is because
 
 $$
 \begin{equation}
@@ -107,4 +107,4 @@ $$
 \end{equation}
 $$
 
-so maximizing for the eigenvalue $\lambda$ corresponds to maximizing for the sample variance. Indicidentally, the same computation shows that the covariance matrix $C$ is a positive semi-definite matrix, since variance is a non-negative quantity.
+so maximizing for the eigenvalue $\lambda$ corresponds to maximizing for the sample variance. Indicidentally, the same computation constrains the sign of $\lambda$ and shows that the covariance matrix $C$ is a positive semi-definite matrix, since variance is a non-negative quantity. [Rayleigh's principle](https://en.wikipedia.org/wiki/Rayleigh_quotient) allows us to compute the rest of the eignevalues iteratively via the method of Lagrangians.
