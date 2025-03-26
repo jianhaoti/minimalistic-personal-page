@@ -49,7 +49,7 @@ Our goal, therefore, is to find a direction that maximizes the sample variance $
 $$
 \begin{equation}
 \begin{split}
-&\max_{\|p\|=1} \mathbb{V}_p[y]\\
+&\max \mathbb{V}_p[y]\\
 &\text{s.t.} \quad \|p\|=1,\\
 \end{split}
 \end{equation}
@@ -74,7 +74,7 @@ where $C$ is the sample covariance matrix of the data $\mathbb{X}$. Therefore, o
 $$
 \begin{equation}
 \begin{split}
-&\max_{\|p\|=1} p^TCp\\
+&\max p^TCp\\
 &\text{s.t.} \quad \|p\|=1,\\
 \end{split}
 \end{equation}
