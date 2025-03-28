@@ -42,7 +42,7 @@ $$
 \end{equation}
 $$
 
-Dividing through by $t$ yields [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality). When $\mu=\mathbb{P}$ is a probability measure, we can intepret this as a weak tail bound. For a non-negative random variable $X\geq 0$ with finite mean $\mu=E[X]$,
+Dividing through by $t$ yields [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality). When $\mu=\mathbb{P}$ is a probability measure, we can interpret this as a weak tail bound. For a non-negative random variable $X\geq 0$ with finite mean $\mu=E[X]$,
 
 $$
 \begin{equation}
