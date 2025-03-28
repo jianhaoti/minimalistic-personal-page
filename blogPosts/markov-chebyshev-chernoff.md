@@ -54,7 +54,7 @@ Let's begin improving this. Using the second moment yields an even tighter bound
 
 $$
 \begin{equation}
-\{x: |X-\mu|\geq t\} = \{x:|X-\mu|^2 \geq t^2\},
+\{\omega: |X(\omega)-\mu|\geq t\} = \{\omega:|X(\omega)-\mu|^2 \geq t^2\},
 \end{equation}
 $$
 
