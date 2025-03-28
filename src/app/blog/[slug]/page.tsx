@@ -8,27 +8,7 @@ import remarkHtml from "remark-html";
 import "katex/dist/katex.min.css";
 import { notFound } from "next/navigation";
 import rehypeRaw from "rehype-raw";
-
-const baseDirectory = process.cwd();
-
-export async function getBlogPost(slug: string) {
-  const folders = ["blogPosts", "blogDrafts"];
-  for (const folder of folders) {
-    const filePath = path.join(baseDirectory, folder, `${slug}.md`);
-    try {
-      const fileContent = await fs.readFile(filePath, "utf8");
-      const { data, content } = matter(fileContent);
-      return {
-        frontMatter: data,
-        content,
-        source: folder,
-      };
-    } catch {
-      continue;
-    }
-  }
-  return null;
-}
+import { getBlogPost } from "@/lib/posts";
 
 export default async function BlogPost({
   params,
@@ -36,7 +16,7 @@ export default async function BlogPost({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = await getBlogPost(slug);
+  const post = getBlogPost(slug);
 
   if (!post) return notFound();
 

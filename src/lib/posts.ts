@@ -4,6 +4,25 @@ import matter from "gray-matter";
 
 const baseDirectory = process.cwd(); // Base directory for Markdown files
 
+export function getBlogPost(slug: string) {
+  const folders = ["blogPosts", "blogDrafts"];
+  for (const folder of folders) {
+    const filePath = path.join(baseDirectory, folder, `${slug}.md`);
+    try {
+      const fileContent = fs.readFileSync(filePath, "utf8");
+      const { data, content } = matter(fileContent);
+      return {
+        frontMatter: data,
+        content,
+        source: folder,
+      };
+    } catch {
+      continue;
+    }
+  }
+  return null;
+}
+
 // Function for fetching blog posts [FROM TWO DIFFERNET DIRECTORIES!]
 export function getBlogPosts() {
   const postsDirectories = [
