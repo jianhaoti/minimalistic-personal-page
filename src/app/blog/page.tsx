@@ -2,7 +2,7 @@ import { getBlogPosts } from "../../lib/posts";
 import Link from "next/link";
 
 export default async function Blog() {
-  const posts = getBlogPosts(); // Fetch blog posts
+  const posts = getBlogPosts();
 
   return (
     <div>

@@ -80,7 +80,7 @@ $$
 &\leq \frac{\mathbb{E}[\exp(s(X-\mu))]}{\exp(st)}\\
 &= \frac{\mathbb{E}[\frac{\exp(sX)}{\exp(s\mu)}]}{\exp(st)}\\
 &= \exp(-s(\mu+t))\mathbb{E}[\exp(sX)]\\
-&=O(\exp(-t)).
+&=O(\exp(-st)).
 \end{split}
 \end{equation}
 $$

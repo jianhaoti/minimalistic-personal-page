@@ -6,7 +6,6 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import "katex/dist/katex.min.css";
 import { notFound } from "next/navigation";
-import SideBySideImages from "@/components/SideBySideImages";
 import rehypeRaw from "rehype-raw";
 import Link from "next/link";
 import Image from "next/image"; // ✅ Use Next.js optimized Image
@@ -59,19 +58,6 @@ export default async function ProjectPost({ params }: ProjectPostProps) {
               // ✅ Custom Next.js Image Component for Markdown
               img: ({ src, alt }) => {
                 if (!src) return null; // Ensure src exists
-
-                // ✅ Side-by-side image handling
-                if (alt?.includes("|")) {
-                  const [src1, caption1, src2, caption2] = alt.split("|");
-                  return (
-                    <SideBySideImages
-                      src1={`/images/${src1.trim()}`}
-                      src2={`/images/${src2.trim()}`}
-                      caption1={caption1.trim()}
-                      caption2={caption2.trim()}
-                    />
-                  );
-                }
 
                 return (
                   <div className="flex justify-center my-4">

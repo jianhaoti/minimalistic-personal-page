@@ -17,22 +17,26 @@ interface BlogFrontMatter {
   tags?: string[];
 }
 
-// ✅ Async function to fetch blog data with explicit types
-async function getBlogPost(
-  slug: string
-): Promise<{ frontMatter: BlogFrontMatter; content: string } | null> {
-  const filePath = path.join(process.cwd(), "blogPosts", `${slug}.md`);
+const baseDirectory = process.cwd();
 
-  try {
-    const fileContent = await fs.readFile(filePath, "utf8");
-    const { data, content } = matter(fileContent);
-
-    return { frontMatter: data as BlogFrontMatter, content }; // ✅ Explicitly type `data`
-  } catch {
-    return null;
+export async function getBlogPost(slug: string) {
+  const folders = ["blogPosts", "blogDrafts"];
+  for (const folder of folders) {
+    const filePath = path.join(baseDirectory, folder, `${slug}.md`);
+    try {
+      const fileContent = await fs.readFile(filePath, "utf8");
+      const { data, content } = matter(fileContent);
+      return {
+        frontMatter: data,
+        content,
+        source: folder,
+      };
+    } catch {
+      continue;
+    }
   }
+  return null;
 }
-
 export default async function BlogPost({
   params,
 }: {
