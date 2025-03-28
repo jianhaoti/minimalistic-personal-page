@@ -9,14 +9,6 @@ import "katex/dist/katex.min.css";
 import { notFound } from "next/navigation";
 import rehypeRaw from "rehype-raw";
 
-// ✅ Define the interface for front matter metadata
-interface BlogFrontMatter {
-  title: string;
-  excerpt?: string;
-  date?: string;
-  tags?: string[];
-}
-
 const baseDirectory = process.cwd();
 
 export async function getBlogPost(slug: string) {
@@ -37,6 +29,7 @@ export async function getBlogPost(slug: string) {
   }
   return null;
 }
+
 export default async function BlogPost({
   params,
 }: {
