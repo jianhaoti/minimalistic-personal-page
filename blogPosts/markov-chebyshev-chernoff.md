@@ -7,11 +7,11 @@ We record a simple proof of Markov's inequality via indicator functions, then di
 "
 ---
 
-Markov's inequality is fundamentally a statement about indicator functions of superlevel sets. Given a non-negative function $f:X\to \mathbb{R}^{\geq 0}$ and a number $t>0$, consider the superlevel set $S_t$ defined by
+Markov's inequality is fundamentally a statement about indicator functions of superlevel sets. Given a non-negative function $X:\Omega\to \mathbb{R}^{\geq 0}$ and a number $t>0$, consider the superlevel set $S_t$ defined by
 
 $$
 \begin{equation}
-S_t:=\{x: f(x)\geq t\}.
+S_t:=\{\omega: f(\omega)\geq t\}.
 \end{equation}
 $$
 
@@ -19,26 +19,26 @@ It is clear, by construction, the minimum that $f$ can take on $S_t$ is $t$. In 
 
 $$
 \begin{equation}
-f \geq t.
+X \geq t.
 \end{equation}
 $$
 
-If we partition $X=S_t \sqcup (S_t)^c$, then we can convert (2) into an inequality on $X$ by
+If we partition $\Omega=S_t \sqcup (S_t)^c$, then we can convert (2) into an inequality on $\Omega$ by
 
 $$
 \begin{equation}
-f \geq \begin{cases}
+X \geq \begin{cases}
 t & \text{in } S_t\\
 0 & \text{in } (S_t)^c
 \end{cases}= t 𝟙_{S_t},
 \end{equation}
 $$
 
-where $𝟙_S$ denotes the indicator function of the set $S$. Let $\nu$ denote the measure on $X$. Integrating (3) yields
+where $𝟙_S$ denotes the indicator function of the set $S$. Let $\nu$ denote the measure on $\Omega$. Integrating (3) yields
 
 $$
 \begin{equation}
-\int_X f \; d\nu \geq t \int_X  𝟙_{S_t}\; d\nu = t \nu(S_t).
+\int_\Omega X \; d\nu \geq t \int_\Omega  𝟙_{S_t}\; d\nu = t \nu(S_t).
 \end{equation}
 $$
 
