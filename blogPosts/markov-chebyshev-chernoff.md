@@ -34,15 +34,15 @@ t & \text{in } S_t\\
 \end{equation}
 $$
 
-where $𝟙_S$ denotes the indicator function of the set $S$. Let $\mu$ denote the measure on $X$. Integrating (3) yields
+where $𝟙_S$ denotes the indicator function of the set $S$. Let $\nu$ denote the measure on $X$. Integrating (3) yields
 
 $$
 \begin{equation}
-\int_X f\geq t \int_X  𝟙_{S_t} = t \mu(S_t).
+\int_X f \; d\nu \geq t \int_X  𝟙_{S_t}\; d\nu = t \nu(S_t).
 \end{equation}
 $$
 
-Dividing through by $t$ yields [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality). When $\mu=\mathbb{P}$ is a probability measure, we can interpret this as a weak tail bound. For a non-negative random variable $X\geq 0$ with finite mean $\mu=E[X]$,
+Dividing through by $t$ yields [Markov's inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality). When $\nu=\mathbb{P}$ is a probability measure, we can interpret this as a weak tail bound. For a non-negative random variable $X\geq 0$ with finite mean $\mu=E[X]$,
 
 $$
 \begin{equation}
