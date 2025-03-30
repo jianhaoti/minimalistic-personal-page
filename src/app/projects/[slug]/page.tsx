@@ -25,7 +25,7 @@ export default async function ProjectPost({ params }: ProjectPostProps) {
     const { data, content } = matter(fileContent);
 
     return (
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-3xl mx-auto">
         {/* Header Section */}
         <header className="border-b border-gray-300 pb-4 mb-6">
           <div className="flex items-center">
