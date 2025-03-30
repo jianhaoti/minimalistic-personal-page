@@ -7,7 +7,6 @@ import remarkMath from "remark-math";
 import "katex/dist/katex.min.css";
 import { notFound } from "next/navigation";
 import rehypeRaw from "rehype-raw";
-import Link from "next/link";
 import Image from "next/image"; // ✅ Use Next.js optimized Image
 
 interface ProjectPostProps {
@@ -25,25 +24,11 @@ export default async function ProjectPost({ params }: ProjectPostProps) {
     const { data, content } = matter(fileContent);
 
     return (
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto ">
         {/* Header Section */}
         <header className="border-b border-gray-300 pb-4 mb-6">
-          <div className="flex items-center">
-            <h1 className="text-3xl font-bold">{data.title}</h1>
-            {data.link && (
-              <Link
-                href={data.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-4 text-gray-600 hover:text-gray-900 text-2xl"
-              >
-                ↗
-              </Link>
-            )}
-          </div>
-          <p className="text-gray-500 text-sm mb-2">
-            {data.excerpt || data.description}
-          </p>
+          <h1 className="text-3xl font-bold leading-none">{data.title}</h1>
+          <p className="text-gray-500 text-sm mb-2">{data.description}</p>
           <p className="uppercase text-gray-700 text-xxs font-bold">
             {data.date}
           </p>

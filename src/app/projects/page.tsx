@@ -1,5 +1,6 @@
 import { getProjectPosts } from "../../lib/posts";
 import Link from "next/link";
+
 export default async function Projects() {
   const projects = getProjectPosts(); // Fetch project posts
 
