@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["mathbb", "mathcal", "Riemannian"]
+  "cSpell.words": ["mathbb", "mathcal", "Riemannian"],
+  "editor.renderLineHighlight": "none"
 }
