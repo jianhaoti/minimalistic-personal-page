@@ -2,7 +2,7 @@
 title: "Rescaling Errors"
 date: "29 March 2025"
 tags: ["probability", "statistics"]
-excerpt: "We investigate the appearance of the scaling factor sqrt(n)/σ in the central limit theorem."
+excerpt: "We investigate the appearance of the scaling factor √n / σ in the central limit theorem."
 ---
 
 Recall the strong law of large numbers.
@@ -45,4 +45,4 @@ $$
 \end{equation}
 $$
 
-which pins down the scale in natural units on the tolerance as the standard deviation $\frac{\sigma}{\sqrt{n}}$, since the right hand side is no longer artifically dependent on the sample size $n$. Notice the appearce of $\frac{\sqrt{n}}{\sigma}\varepsilon_n$ in both the CLT and Chebyshev's inequality. Both cases point out that amplifying by the standard deviation stablizes the error $\varepsilon_n$, implying its decay rate is of order $O(n^{-1/2})$.
+which pins down the scale in natural units on the tolerance as the standard deviation $\frac{\sigma}{\sqrt{n}}$, since the right hand side is no longer artifically dependent on the sample size $n$. Notice the appearce of $\frac{\sqrt{n}}{\sigma}\varepsilon_n$ in both the CLT and Chebyshev's inequality. Both cases point out that amplifying by the standard deviation stablizes the error $\varepsilon_n$. In particular, the decay rate on $\epsilon_n$ is of order $O(n^{-1/2})$.
