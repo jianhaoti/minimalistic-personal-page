@@ -24,7 +24,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-           WWDC '25 Swift Student Challenge Winner
+           WWDC &#39;25 Swift Student Challenge Winner
         </Link>
       </div>
     </div>
