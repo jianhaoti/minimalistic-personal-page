@@ -2,7 +2,7 @@
 title: "Kandae's Algorithm, Geometrically"
 date: "1 June 2025"
 tags: ["algorithms"]
-excerpt: "We give a simple graphical interpretaion to Kandae's solution to the maximum subarray porblem."
+excerpt: "We give a simple graphical interpretaion to Kandae's solution to the maximum subarray problem."
 ---
 
 Recall the goal of the [maximum subarray problem](https://leetcode.com/problems/maximum-subarray/description/) is given an integer array $A$, find a subarray $S$ such that the sum of the entries $S$ is maximized among all subarrays of $A$. Kandae's solution is, roughly speaking, greedily maximize _wrt_ no the constraint of no non-positive prefixes. We provide a graphical interpretation of this explanation.
