@@ -25,3 +25,7 @@ $${}$$
 $${}$$
 
 Notice that there are two non-positive prefixes, namely the subarrays $[1,2,-4]$ and $[7,−2,5,−10]$. In the plot, these would constitutes as "restarts", since they take down to or below the previous minimum. Between each "restart" we can just obviously employ a simple greedy scheme of keeping max displacement.
+
+$${}$$
+
+An alterantive interpretation is to interpret the above plot as the price action chart of a stock. Under this interpretation, we see that this problem becomes [best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/).
