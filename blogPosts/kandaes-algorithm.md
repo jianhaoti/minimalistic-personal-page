@@ -5,7 +5,7 @@ tags: ["algorithms"]
 excerpt: "We give a simple graphical interpretaion to Kandae's solution to the maximum subarray problem."
 ---
 
-Recall the goal of the [maximum subarray problem](https://leetcode.com/problems/maximum-subarray/description/) is given an integer array $A$, find a subarray $S$ such that the sum of the entries $S$ is maximized among all subarrays of $A$. Kandae's solution is, roughly speaking, greedily maximize _wrt_ no the constraint of no non-positive prefixes. We provide a graphical interpretation of this explanation.
+Recall the goal of the [maximum subarray problem](https://leetcode.com/problems/maximum-subarray/description/) is given an integer array $A$, find a subarray $S$ such that the sum of the entries $S$ is maximized among all subarrays of $A$. Kandae's solution is, roughly speaking, greedily maximize _wrt_ no non-positive prefixes. We provide a graphical interpretation of this explanation.
 
 $${}$$
 
@@ -24,4 +24,4 @@ $${}$$
 
 $${}$$
 
-Notice that there are two non-positive prefixes, namely the subarrays $[1,2,-4]$ and $[7,−2,5,−10]$. In the plot, these would constitutes as "restarts", since they take up to or below the previous minimum. And between each "restart" we can just obviously employ a simple greedy scheme of keeping max displacement.
+Notice that there are two non-positive prefixes, namely the subarrays $[1,2,-4]$ and $[7,−2,5,−10]$. In the plot, these would constitutes as "restarts", since they take down to or below the previous minimum. Between each "restart" we can just obviously employ a simple greedy scheme of keeping max displacement.
