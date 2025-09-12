@@ -49,7 +49,7 @@ $$
 \end{equation}
 $$
 
-Let $X,Y$ be r.v.'s taking values in $\{x_i\},\{y_i\}$, both with probability $\{\lambda_i\}$. Then,
+Let $X,Y$ be r.v.'s taking values in $\{x_i\},\{y_i\} \subset \mathbb{R}^{>0}$, both with probability $\{\lambda_i\}$. Then,
 
 $$
 \begin{equation}
@@ -71,7 +71,7 @@ $$
 \end{equation}
 $$
 
-Now set $\lambda_i=1/n$ and $p=1/2$. Therefore,
+Now set $\lambda_i=1/n$ and $p=1/2$. Thus,
 
 $$
 \begin{equation}
