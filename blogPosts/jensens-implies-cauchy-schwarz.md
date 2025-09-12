@@ -11,7 +11,7 @@ In this, we aim to prove the following theorem
 
 $${}$$
 
-**Cauchy-Schwarz.** Given $u_i,v_i\in \R$,
+**Theorem [Cauchy-Schwarz].** Given $u_i,v_i\in \R$,
 
 $$
 \begin{equation}
@@ -23,7 +23,7 @@ via the following inequality
 
 $${}$$
 
-**Jensen's.** Given a random vector $Z\in \R^n$ and $f$ concave,
+**Theorem [Jensen's].** Given a random vector $Z\in \R^n$ and $f$ concave,
 
 $$
 \begin{equation}
