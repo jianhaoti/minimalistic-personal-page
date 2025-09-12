@@ -33,15 +33,7 @@ $$
 
 $${}$$
 
-The key is analyzing the function $f(x,y):=x^py^{1-p}$ for $x,y> 0$ and $0\leq p\leq 1$. To show $f$ is concave, it suffices to show log-concavity. Since
-
-$$
-\begin{align}
-\log f = p\log x + (1-p) \log y\\
-\end{align}
-$$
-
-and $p,1-p>0$ and $\log$ is concave, then so must be $\log f$. Therefore, Jensen's applies, yielding
+The key is concavity of the function $f(x,y):=x^py^{1-p}$ for $x,y> 0$ and $0\leq p\leq 1$. Applying Jensen's to $f$ yields
 
 $$
 \begin{equation}
