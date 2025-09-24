@@ -9,8 +9,6 @@ We take two traces of the Gauss equation to get a scalar relationship between in
 
 The most fundamental equation of Riemannian geometry is the Gauss equation, which relates intrinsic and extrinsic curvatures of an embedding $\Sigma\subset M$. Here's the full beast.
 
-$$\text{ }$$
-
 **Theorem [Gauss].** _Given a embedding of a hypersurface $\Sigma^{n-1}$ into a Riemannian manifold $M^n$, for vector fields $X,Y,Z,W\in \mathfrak{X}(\Sigma)$,_
 
 $$
@@ -23,16 +21,10 @@ Rm(X,Y,Z,W)&= Rm_\Sigma(X,Y,Z,W)\\
 \end{equation}
 $$
 
-$$\text{ }$$
-
 For notation, a quantity with a subscript of $\Sigma$ means that it's associated with the hypersurface $\Sigma$, while no subscript means that it's associated with the ambient manifold $M$. In the above, $Rm$ denotes the $(0,4)$ Riemannian curvature tensor,
 $A(X,Y):=\langle \nabla_X N, Y\rangle$ denotes the second fundamental form, and $N$ denotes a unit normal to $\Sigma$. Later, we use $Ric$ to denote Ricci curvature, $R$ to denote scalar curvature, and $H:=\sum_{i=1}^{n-1} A(e_i,e_i)$ to denote mean curvature.
 
-$$\text{ }$$
-
 Geometers typically find $Rm$ too difficult to study and historically they've reduced complexity by taking traces. We claim that after taking two traces, Gauss equation reduces to the following scalar formula.
-
-$$\text{ }$$
 
 **Theorem [Gauss].** _Under the same assumptions as above,_
 
@@ -43,8 +35,6 @@ Ric(N,N)=\frac{1}{2}(R-R_\Sigma +H^2-|A|^2).
 \end{split}
 \end{equation}
 $$
-
-$$\text{ }$$
 
 <u>Proof.</u> To this end, we will take traces _wrt_ an orthonormal frame $E:=\{e_1,...,e_{n-1}\}$ along $\Sigma$. We first take a single trace in the $X,W$ slots to get
 

@@ -9,19 +9,13 @@ We use Monte Carlo integration as a backdrop to explore how introducing probabli
 
 The curse of dimensionality is easy to understand - volume grows exponentially with dimension. This implies we need to sample exponentially many data points relative to the number of features in order to have anything meaningful. What isn't so clear is why injecting randomness helps alleviate the issue. We use Monte Carlo integration as a backdrop to investigate this phenomenon.
 
-$$\text{}$$
-
 We open with a seemingly unrelated lemma. In time, we will see that this lemma is the backbone to this phenomenon.
-
-$$\text{}$$
 
 **Lemma.** _On a bounded domain $(\Omega,\mu)$, for $q\geq p$ we have the inclusion $L^q(\Omega,\mu)\subset L^p(\Omega,\mu)$. In fact, up to a constant $C=C(\mu(\Omega),p,q)$ which is independent of the dimension,_
 
 $$
 \|f\|_p\leq C \|f\|_q.
 $$
-
-$$\text{ }$$
 
 <u>Proof.</u> This is an straightforward application of Hölder's inequality. We begin by setting $s$ as the Hölder conjugate to $\frac{q}{p}$. We compute
 
@@ -33,11 +27,7 @@ $$
 
 Taking $p$-th roots gives the claim.
 
-$$\text{}$$
-
 Actually, for our purposes, we'll need to control only the variance of a random variable $Y$. In this case, we can achieve a (usually) sharper constant of $1$. For this, we only need the convexity of the $q$-norms.
-
-$$\text{}$$
 
 **Lemma.** _For a random variable $Y\in L^q$ with $q\geq 2$, we have_
 
@@ -48,8 +38,6 @@ $$
 $$
 
 _In other words, the standard deviation of $Y$ is controlled by all its higher moments_.
-
-$$\text{ }$$
 
 <u>Proof.</u> This is a simple application of Jensen's inequality. When applied to the $s$-norm for $s\geq 1$, it states
 
@@ -71,8 +59,6 @@ $$
 \end{split}
 \end{equation}
 $$
-
-$$\text{}$$
 
 Let's turn to integration. Let $\Omega\subset \R^n$ be a box. Clasically, we'd draw evenly spaced grid lines and integrate by sampling along all corners. As discussed, this is a bad idea by the curse of dimensionality. Instead, let $\mu$ denote the uniform measure on $\Omega$, and we draw $m$ iid samples $X_1,...,X_m$ in $\Omega$. For conveneince, set $X$ as an auxillary random variable also sampled from $(\Omega,\mu)$. Our first goal is to show the random Riemann sum $\frac{1}{m}\sum_{i=1}^m f(X_i)$ forms an unbiased estimator for the true integral $\int_\Omega f\; dx$. We compute
 

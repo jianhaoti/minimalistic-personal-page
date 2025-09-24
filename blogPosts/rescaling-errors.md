@@ -7,8 +7,6 @@ excerpt: "We investigate the appearance of the scaling factor √n / σ in the c
 
 Recall the strong law of large numbers.
 
-$${}$$
-
 **Theorem [SLLN].** _Let_ $X_1,...,X_n$ _be a sequence of i.i.d. random variables with finite mean_ $\mu$ _and variance_ $\sigma^2.$ _Then, the sequence of sample means_ $\bar{X}_n:=\frac{1}{n}\sum_{i=1}^m X_i$ _converges almost surely to $\mu$. In other words, almost surely_
 
 $$
@@ -18,8 +16,6 @@ $$
 $$
 
 Under a signal-noise interpretation, SLLN tells the signal (mean) dominates asymptotically. This result is sharpened by the central limit theorem.
-
-$${}$$
 
 **Theorem [CLT].** _Let_ $X_1,...,X_n$ _be a sequence of i.i.d. random variables with finite mean_ $\mu$ _and variance_ $\sigma^2.$ _Then the sequence of properly normalized sample means_ $\bar{X}_n:=\frac{1}{n}\sum_{i=1}^mX_i$ _convergences in distribution to the Gaussian_
 

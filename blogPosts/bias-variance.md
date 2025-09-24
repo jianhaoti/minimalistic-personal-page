@@ -7,8 +7,6 @@ excerpt: "We use the bias-variance decomposition in machine learning as a backdr
 
 All the computer scientists I've talked to have a very intuitive grasp of randomness, which comes through in the language they use. They'll say phrases like "sources of randomness" which reflects a level of comfort that I'd like to achieve. Let's explore this line of thinking.
 
-$$\text{ }$$
-
 **Setup.** Let's suppose the "true" relation between features $x$ and labels $y$ is given by the function $f$. The goal is to learn $f$, through restricted access via $y$. This will be further complicated by the noise in the system (due to measurement error, random fluctuations, white noise, etc). This leads us to model our relation between features and labels as a deterministic-random decomposition
 
 $$
@@ -18,11 +16,7 @@ $$
 
 where $\epsilon$ is assumed to to have mean $0$ and variance $\sigma^2$. The mean $0$ assumption is natural, and as far as I can tell, finite variance is a smallness assumption on the noise. Furthermore, we assume that $x,\epsilon$ are independent, because why wouldn't they be?
 
-$$\text{}$$
-
 Let $\hat{y}$ be whatever predictor we built in our effort to learn $f$. This requires training data, denoted by $\mathcal{D}$, and different training data will lead to different predictors $\hat{y}$. This accounts for the first source of randomness, namely in the variability in the training data. Furthermore, since the creation of $\hat{y}$ is via a deterministic process, all of the randomness in $\hat{y}$ is concentrated in the variability of $\mathcal{D}$.
-
-$$\text{ }$$
 
 **Statistics.** In order to measure how badly our model $\hat{y}$ predicts labels $\mathbb{y}$, we introduce a _loss function_ $L(x)=L(y(x),\hat{y}(x))$, where $x$ is a fixed but arbitrary test point. Of course testing over individual points is too much information, so we average over points in $x$ to define the _test error_ statistic
 
@@ -42,8 +36,6 @@ $$
 
 In order to compute $Err_{\mathcal{D}}$, we would need complete knowledge of the density function $p$. Equivalently, this means we need to know the distribution that $x$ was sampled from. However, since _we can only draw finitely many samples_ (via a training set $\mathcal{D}$), we can only estimate $p$.
 
-$$\text{}$$
-
 To circumvent this problem, we instead compute the _expected generalization error_ by averaging the test error over all training data $\mathcal{D}$,
 
 $$
@@ -61,8 +53,6 @@ Err=\mathbb{E}^{\mathcal{x}}[\mathbb{E}^{\mathcal{D}}[L|x]],\\
 $$
 
 where the inner expectation averages over training data $\mathcal{D}$ and the outer expectation averages over test points $x$.
-
-$$\text{}$$
 
 **Bias-variance.** The goal of this section is to calculate the inner expectation $Err(x):=\mathbb{E}^{\mathcal{D}}[L|x]$ when $L$ is the $L^2$ loss (how else would variance enter?). For notation, we denote the conditional expectation with subscripts
 
@@ -116,8 +106,6 @@ Err(x)&=\mathbb{f}(x)^2-2f(x)\mathbb{E}_x[\hat{y}]+\mathbb{E}_x[\hat{y}]^2+\math
 $$
 
 **Gauss-Markov.** Gauss-Markov tells us that OLS is unbiased and variance minimizing among all linear unbiased estimators. At a glance, this seems to contradict most of the pictures drawn when discussing bias-variance. Usually, the picture suggests that the data follows a (e.g.) quadratic $f$, and linear models are said to underfit with high-bias-low-variance, while high degree polynomials are said to overfit with low-bias-high-variance. So why can Gauss-Markov claim that OLS, a linear function, is unbiased? Are we overloading the word bias?
-
-$$\text{}$$
 
 First, realize that built into Gauss-Markov are stronger assumptions on the errors, but more importantly, the underlying assumption that the true function $f$ is linear in the features. This restricts your search space to affine functions from the get-go. In other words, we assume that
 

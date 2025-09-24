@@ -9,8 +9,6 @@ We derive Cauchy-Schwarz via Jensen's inequality.
 
 In this, we aim to prove the following theorem
 
-$${}$$
-
 **Theorem [Cauchy-Schwarz].** Given $u_i,v_i\in \R$,
 
 $$
@@ -21,8 +19,6 @@ $$
 
 via the following inequality
 
-$${}$$
-
 **Theorem [Jensen's].** Given a random vector $Z\in \R^n$ and $f$ concave,
 
 $$
@@ -30,8 +26,6 @@ $$
 \mathbb{E}[f(Z)]\leq f(\mathbb{E}[Z]).
 \end{equation}
 $$
-
-$${}$$
 
 The key is concavity of the function $f(x,y):=x^py^{1-p}$ for $x,y> 0$ and $0\leq p\leq 1$. Applying Jensen's to $f$ yields
 

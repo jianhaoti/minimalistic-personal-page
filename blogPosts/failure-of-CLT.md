@@ -47,8 +47,6 @@ $$
 
 The approximation is by de Moivre-Laplace CLT, while the inequality is by the Gaussian tails computation. All good? No. What fails is this argument is that the approximation error large, on the order of $O(N^{-\frac{1}{2}})$, so in fact the final inequality would be on this order. This is worse than our initial Chebyshev's bound! The relevant fact here is the Berry-Esseen CLT theorem, which is a quantitative, pre-asymptotic version of CLT.
 
-$$\text{}$$
-
 **Theorem [Berry-Esseen].** _Suppose that $X_i$ is a sequence of iid random variables with mean $0$ and variance $1$, and $X_1$ has a finite third moment. Let $Y\sim \mathcal{N}(0,1)$. Then,_
 
 $$
@@ -58,8 +56,6 @@ $$
 $$
 
 Note that we've chosen this normalization so it has mean $0$ and varaince $1$ which makes it comprable to $\mathcal{N}(0,1)$. The asymptotics of Berry-Esseen are actually sharp, by considering specific binomial distributions. To circumvent this issue, we develop Hoeffding's inequality which will directly give an exponential tail bound.
-
-$$\text{}$$
 
 **Theorem [Hoeffding].** _Suppose $X_1,...,X_n$ are bounded random variables such that $X_i\in [a_i,b_i]$. Then,_
 

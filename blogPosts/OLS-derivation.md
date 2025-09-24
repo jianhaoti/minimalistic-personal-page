@@ -30,8 +30,6 @@ $$
 
 For the last line, we define the _design matrix_ $X$ as the $m\times (n+1)$ matrix where the $i$th row is the vector $x_i^T$. Also, $y^T:=[y_1,...,y_m]$.
 
-$$\text{}$$
-
 **Minimum.** We can interpret the final form of $(2)$ as the following question: what is the projection of a vector $y\in \R^m$ to the column space of $X$? Note that by convexity, we get a local-to-global property. Therefore, it suffices to compute the first order optimality conditions for $\|y-X\beta\|^2$ to find its minimum. We expand this out as
 
 $$

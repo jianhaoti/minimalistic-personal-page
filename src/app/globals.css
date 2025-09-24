@@ -56,3 +56,24 @@ a:hover {
   -webkit-text-fill-color: transparent;
   animation: shimmer 20s linear infinite;
 }
+
+.markdown-body {
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.markdown-body p {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body ol {
+  padding-left: 2em;
+  margin-bottom: 16px;
+  margin-top: 0;
+  list-style-type: decimal;
+}
+
+.markdown-body li {
+  margin-bottom: 0.25em;
+}

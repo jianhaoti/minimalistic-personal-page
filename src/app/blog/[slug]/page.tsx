@@ -1,11 +1,11 @@
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
-import remarkHtml from "remark-html";
+import remarkGfm from "remark-gfm";
 import "katex/dist/katex.min.css";
 import { notFound } from "next/navigation";
-import rehypeRaw from "rehype-raw";
 import { getBlogPost } from "@/lib/posts";
+import rehypeRaw from "rehype-raw";
 
 export default async function BlogPost({
   params,
@@ -27,14 +27,14 @@ export default async function BlogPost({
         </p>
       </header>
 
-      <article className="prose max-w-none">
+      <div className="markdown-body">
         <ReactMarkdown
-          remarkPlugins={[remarkMath, remarkHtml]}
-          rehypePlugins={[rehypeKatex, rehypeRaw]}
+          remarkPlugins={[remarkMath, remarkGfm]}
+          rehypePlugins={[rehypeRaw, rehypeKatex]}
         >
           {post.content}
         </ReactMarkdown>
-      </article>
+      </div>
     </div>
   );
 }

@@ -41,8 +41,6 @@ $$
 
 We mention that the second equality in the calculation of the variance relies on the application of [LOTUS](https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician). Repeating these calculations in higher dimenesions yields the center-of-mass vector for expectation, and sample covariance matrix for variance. Observe that the natural normalization for the sample variance makes it an _biased_ estimator for the population variance.
 
-$${}$$
-
 **p1.** The goal is to find a direction $p\in \mathbb{S}^{n-1}\subset \R^n$ in which the data has maximal spread. Since data spread is a purely empirical notion, we quantify it à la sample variance. Let $y_i:=p\cdot x_i$ be the projection of $x_i$ in the direction of $p$.
 Our goal, therefore, is to find a direction that maximizes the sample variance $\mathbb{Y}=\{y_1,...,y_m\}$. This is formalized by the optimization problem
 
@@ -109,11 +107,7 @@ $$
 
 so maximizing for the eigenvalue $\lambda$ corresponds to maximizing for the sample variance. Indicidentally, the same computation constrains the sign of $\lambda$ and shows that the covariance matrix $C$ is a positive semi-definite matrix, since variance is a non-negative quantity.
 
-$${}$$
-
 **Why orthogonality?** The further principal components are computed iteratively under the same variance maximization scheme, but under the new constraint that $p_{i+1}$ is orthogonal to the previous principal direction $\{p_1,...,p_i\}$. This orthogonality condition enables the use of [Rayleigh's principle](https://en.wikipedia.org/wiki/Rayleigh_quotient), allowing us to compute the eigenvalues of the covariance matrix iteratively via Lagrangians.
-
-$${}$$
 
 It's not immediately clear why orthogonality is more than just a convenient mathematical trick. What is the statistical motivation behind enforcing this condition? The answer gets to what covariance _is_ and why we employ it as the natural inner product. For our purposes, it's best to define covariance as the error term blocking variance from being an additive homorphism. In other words, define for random variables $X,Y$ their covariance
 
@@ -124,7 +118,5 @@ $$
 $$
 
 The prefactor of one half is for the convenient normalization $\text{Cov}(X,X)=\mathbb{V}[X]$. We say random variables are _uncorrelated_ if and only if their covariance is $0$. The key here is that the concept of being uncorrelated, or equivalently variance additivity, captures the idea of _variance independence_.
-
-$${}$$
 
 Back to PCA. If we were in the business of maximizing variance through unscrupulous means, ideally we'd try to reach a total variance of $n\mathbb{V}_{p_1}[y_1].$ [Being the crafty and morally onerous mathematician that I am](https://www.youtube.com/watch?v=kxN_qPuefrM&ab_channel=CalvinLim), I fix a cone $C_\epsilon$ of small opening angle $\epsilon$ around $p_1$ and arbitrarily pick directions $p_2,...,p_n\in C_\epsilon$ to form the basis $\{p_1,...,p_n\}$. The total variance of the basis is nearly $n\mathbb{V}_{p_1}[y_1]$, since I've esssentially captured the variance in the $p_1$ direction $n$ times. The issue is that _the sources of variation are highly dependent_; the fix is to impose variance independence. As discussed, this is equivalent to asking the principal directions be uncorrelated. This motivates us to define covariance as our inner product, and the orthogonality constraint on the principal directions follows.
