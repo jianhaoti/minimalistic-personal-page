@@ -19,9 +19,7 @@ to the discrete case of graphs is to interpret the gradient of a function as a d
 
 In this article we take a different approach. Our new strategy is to develop a purely _continuous_ heuristic of $\Delta$ involving no derivatives, then to import that idea the graph setting to define the graphical Laplacian. As a small technicality, we're going to generalize the _negative_ Laplacian, namely the negative of equation $(1)$.
 
-<div style="border:0.5px solid black; padding:10px ;">
-    <u>Heuristic:</u> The negative Laplacian measures the difference between a function value and its local average value.
-</div>
+<u>Heuristic:</u> _The negative Laplacian measures the difference between a function value and its local average value._
 
 **Heat equation Intuition.** To extract this heuristic from $\Delta$, let’s explore why the Laplacian appears in the heat equation. We say $u(x,t)$, subject to the initial condition $u(x,0)=f(x)$ solves the heat equation if
 

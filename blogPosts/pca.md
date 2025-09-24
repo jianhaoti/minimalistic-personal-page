@@ -20,7 +20,7 @@ $$
 \begin{split}
 \mathbb{E}[x]&=\sum_{i=1}^m x_i \mathbb{P}_\mathbb{X}(x=x_i) \\
 &=\sum_{i=1}^m x_i \mathbb{P}_\mathbb{X}(x_i) \\
-&=\sum_{i=1}^m x_i \left(\frac{1}{m}\sum_{j=1}^m𝟙_{x_j}(x_i)\right)\\
+&=\sum_{i=1}^m x_i \left(\frac{1}{m}\sum_{j=1}^m 𝟙_{x_j}(x_i)\right)\\
 &=\sum_{i=1}^m x_i\left(\frac{1}{m}\sum_{j=1}^m\delta_{ij}\right)\\
 &=\frac{1}{m}\sum_{i=1}^m x_i.
 \end{split}

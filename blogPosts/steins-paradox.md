@@ -49,7 +49,7 @@ $$
 \end{equation}
 $$
 
-To show positivity of (2), it suffices to show positivity of the integrand _wrt_ the $\chi$ measure in (3)-(4)
+To show positivity of (2), it suffices to show positivity of the integrand _wrt_ $\chi$ in (3)-(4)
 
 $$
 \begin{equation}
@@ -57,4 +57,22 @@ r^2-(1-\frac{d-2}{r^2})^2r^2>0.
 \end{equation}
 $$
 
-After some algebra, inequality (4) holds iff $d>2$.
+for all $r>0$. Unfortunately, this is not true. After some algebra, inequality (5) gives two conditions (due to the square) for positivity of the integrand:
+
+1. $d > 2$,
+2. $r > \sqrt{\frac{d-2}{2}}$.
+
+The first condition is Stein's result. The second, however, constrains positivity of (5) only to large enough radii. To deal with the undesirable negativity, we multiply with a suitable cutoff function. Namely, define the modified James-Stein estimator as
+
+$$
+\begin{equation}
+\begin{split}
+\widetilde{JS}(X)&:= JS(X)\cdot𝟙_{|X|>\sqrt{\frac{d-2}{2}}}\\
+&=\begin{cases}(1-\frac{d-2}{\|X\|^2})X & |X| > \sqrt{\frac{d-2}{2}} \\
+0 & o.w.
+\end{cases}
+\end{split}
+\end{equation}
+$$
+
+Repeating the same analysis with $\widetilde{JS}(X)$ yields the desired result.
