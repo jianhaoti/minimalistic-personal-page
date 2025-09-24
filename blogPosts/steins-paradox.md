@@ -3,8 +3,7 @@ title: "Stein's Paradox "
 date: "23 September 2025"
 tags: ["probability", "geometry", "measure theory", "analysis"]
 excerpt: "
-We present the ideas behind Stein's paradox via radial symmmetry. This avoids integration by parts.
-
+We approach Stein's paradox from a geometric analysis mindset.
 "
 ---
 
