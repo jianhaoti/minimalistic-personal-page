@@ -7,7 +7,7 @@ We approach Stein's paradox from a geometric analysis mindset.
 "
 ---
 
-Let $X\in \mathcal{N}^d(\theta,I)$ be sampled from a Gaussian in $d$ dimensions. Charles Stein famously showed that for $d\geq 3$, $X$ is an inadmissible predictor of $\theta$. Namely, he constructed an estimator with uniformly lower mean squared error. Define the James-Stein estimator as
+Let $X\sim \mathcal{N}^d(\theta,I)$ be sampled from a Gaussian in $d$ dimensions. Charles Stein famously showed that for $d\geq 3$, $X$ is an inadmissible predictor of $\theta$. Namely, he constructed an estimator with uniformly lower mean squared error. Define the James-Stein estimator as
 
 $$
 \begin{equation}
