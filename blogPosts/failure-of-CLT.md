@@ -5,7 +5,7 @@ tags: ["probability", "statistics"]
 excerpt: "We discuss why a naive application of a CLT approximation fails, motivating us to develop Hoeffding's inequality."
 ---
 
-Consider the following example. Given $n$ independent, fair coin flips, estimate the chace that we see $75\%$ heads. Rephrasing, we define the random variable $S_n:=\# \text{heads for } n \text{ flips}$, and we seek an upper bound on $\mathbb{P}(S_n\geq \frac{3}{4}n)$. Observe that we've framed this question as asking for a tail bound. Since $S_n\sim \text{Binom}(n,\frac{1}{2}),$ its expected value and variance is given by $\mathbb{E}S_n=\frac{n}{2}$ and $\mathbb{V}S_n=\frac{n}{4}$. As a first pass, we use [Chebyshev's](/blog/markov's-inequality) to estimate
+Consider the following example. Given $n$ independent, fair coin flips, estimate the chace that we see $75\%$ heads. Rephrasing, we define the random variable $S_n:=\# \text{heads for } n \text{ flips}$, and we seek an upper bound on $\mathbb{P}(S_n\geq \frac{3}{4}n)$. Observe that we've framed this question as asking for a tail bound. Since $S_n\sim \text{Binom}(n,\frac{1}{2}),$ its expected value and variance is given by $\mathbb{E}S_n=\frac{n}{2}$ and $\mathbb{V}S_n=\frac{n}{4}$. As a first pass, we use [Chebyshev's](/blog/russian-tail-bounds) to estimate
 
 $$
 \begin{equation}
