@@ -1,7 +1,7 @@
 ---
 title: "Derivation of OLS"
 date: "23 February 2025"
-tags: ["Machine Learning", "Calculus", "Linear Algebra", "Statistics"]
+tags: ["Machine Learning", "probability", "Linear Algebra", "Statistics"]
 excerpt: "We formulate and solve for OLS as the solution to a minimization problem."
 ---
 

@@ -1,8 +1,9 @@
+// app/(content)/layout.tsx
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export default function ProjectLayout({
+export default function ContentLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -10,6 +11,8 @@ export default function ProjectLayout({
   const fullpathname = usePathname();
   const pathname = fullpathname.startsWith("/projects")
     ? "/projects"
+    : fullpathname.startsWith("/blog")
+    ? "/blog"
     : fullpathname;
 
   return (
@@ -42,7 +45,7 @@ export default function ProjectLayout({
           </Link>
         </nav>
       </header>
-      <main className="max-w-4xl mx-auto p-8">{children}</main>
+      <main className="max-w-2xl mx-auto p-8">{children}</main>
     </div>
   );
 }

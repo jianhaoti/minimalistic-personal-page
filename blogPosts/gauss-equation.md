@@ -1,7 +1,7 @@
 ---
 title: "Gauss Equation"
 date: "10 February 2025"
-tags: ["geometry", "linear algebra", "Riemannian geometry"]
+tags: ["geometry", "linear algebra"]
 excerpt: "
 We take two traces of the Gauss equation to get a scalar relationship between intrinsic and extrinsic curvature quantities of an embedding.
 "

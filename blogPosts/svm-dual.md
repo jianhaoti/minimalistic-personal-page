@@ -1,7 +1,7 @@
 ---
 title: "The Dual Problem to SVM"
 date: "14 March 2025"
-tags: ["calculus", "optimization", "machine learning"]
+tags: ["machine learning"]
 excerpt: "
 We derive the dual problem to soft margin SVM. 
 "

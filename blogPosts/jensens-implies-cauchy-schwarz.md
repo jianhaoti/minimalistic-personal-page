@@ -1,7 +1,7 @@
 ---
 title: "Jensen's Implies Cauchy-Schwarz"
 date: "11 September 2025"
-tags: ["probability", "statistics", "calculus", "analysis"]
+tags: ["probability", "statistics", "analysis"]
 excerpt: "
 We derive Cauchy-Schwarz via Jensen's inequality.
 "

@@ -1,7 +1,7 @@
 ---
 title: "Failure of the Central Limit Theorem"
 date: "20 March 2025"
-tags: ["probability", "statistics", "calculus"]
+tags: ["probability", "statistics"]
 excerpt: "We discuss why a naive application of a CLT approximation fails, motivating us to develop Hoeffding's inequality."
 ---
 

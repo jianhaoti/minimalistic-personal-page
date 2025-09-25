@@ -1,7 +1,7 @@
 ---
 title: "The Russian Tail Bounds"
 date: "16 March 2025"
-tags: ["Probability", "Measure Theory", "Analysis"]
+tags: ["Probability", "Analysis"]
 excerpt: "
 We record a simple proof of Markov's inequality via indicator functions, then discuss how how to tighten it using various transformations.
 "

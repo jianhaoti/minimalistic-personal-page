@@ -1,7 +1,7 @@
 ---
 title: "Bias-Variance, Randomness, and Gauss-Markov"
 date: "22 February 2025"
-tags: ["Machine Learning", "Probability", "Randomness", "Statistics"]
+tags: ["Machine Learning", "Probability", "Statistics"]
 excerpt: "We use the bias-variance decomposition in machine learning as a backdrop to explore some probability-theoretic ways of thinking. We also make a comparison between the bias in Gauss-Markov and in bias-variance."
 ---
 

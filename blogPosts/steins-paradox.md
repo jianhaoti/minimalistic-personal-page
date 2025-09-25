@@ -1,7 +1,7 @@
 ---
 title: "Stein's Paradox "
 date: "23 September 2025"
-tags: ["probability", "geometry", "measure theory", "analysis"]
+tags: ["probability", "geometry", "analysis"]
 excerpt: "
 We approach Stein's paradox from a geometric analysis mindset.
 "

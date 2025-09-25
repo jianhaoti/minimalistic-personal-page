@@ -1,7 +1,7 @@
 ---
 title: "Principal Component Analysis"
 date: "29 March 2025"
-tags: ["statistics", "linear algebra", "measure theory"]
+tags: ["statistics", "linear algebra"]
 excerpt: "We discuss some very basic ideas from empirical processes and use them to motivate PCA."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Monte Carlo and the Curse of Dimensionality"
 date: "19 March 2025"
-tags: ["probability", "statistics", "calculus", "analysis"]
+tags: ["probability", "statistics", "analysis"]
 excerpt: "
 We use Monte Carlo integration as a backdrop to explore how introducing probablistic ideas help alleviate the curse of dimensionality.
 "
