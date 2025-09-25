@@ -14,7 +14,7 @@ export default async function Blog({
 
   const posts = tag
     ? allPosts.filter((post) =>
-        post.tags?.some((t) => t.toLowerCase() === tag.toLowerCase())
+        post.tags?.some((t: string) => t.toLowerCase() === tag.toLowerCase())
       )
     : allPosts;
 
