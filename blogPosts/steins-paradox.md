@@ -76,4 +76,4 @@ $$
 
 Repeating the same analysis with $\widetilde{JS}(X)$ yields the desired result.
 
-It's also easy to see that $\widetilde{JS}$ dominates $JS^+$, the positive part of $JS$. Let $A$ denote the annulus centered at the origin between $\sqrt{\frac{d-2}{2}}$ and $\sqrt{d-2}$. Then, outside of $A$, the two maps agree $\widetilde{JS}\equiv JS^+$. Within $A$, since $JS^+\equiv 0$, its risk is $r^2$. However, $\widetilde{JS}$ satisfies inequality (5) by construction in $A$, and so by (4) its risk is smaller than $r^2$.
+It's also easy to see that $\widetilde{JS}$ dominates $JS^+$, the positive part of $JS$. Let $A$ denote the annulus centered at the origin between $\sqrt{\frac{d-2}{2}}$ and $\sqrt{d-2}$. Outside of $A$, the two maps agree $\widetilde{JS}\equiv JS^+$. Within $A$, since $JS^+\equiv 0$, its risk is $r^2$. However, $\widetilde{JS}$ satisfies inequality (5) by construction in $A$, and so by (4) its risk is smaller than $r^2$.
