@@ -8,7 +8,7 @@ export default async function Projects() {
     <div>
       {projects.map((project, index) => (
         <article key={index} className="mb-12">
-          <p className="uppercase text-gray-700 text-xxs font-bold my-1">
+          <p className="uppercase text-foreground-700 text-xxs font-bold my-1">
             {project.date} {/* Display date range as-is */}
           </p>
 
@@ -24,7 +24,7 @@ export default async function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 text-gray-600 hover:text-gray-900"
+                className="ml-2 text-foreground hover:text-foreground-700"
               >
                 ↗
               </Link>
@@ -33,7 +33,7 @@ export default async function Projects() {
           <p className="text-sm leading-relaxed mt-1">{project.excerpt}</p>
 
           {project.tags && (
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-foreground-500 mt-1">
               <strong>Tags:</strong> {project.tags.join(", ")}
             </p>
           )}

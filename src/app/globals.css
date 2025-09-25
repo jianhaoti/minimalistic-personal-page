@@ -3,8 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff; /* White background */
-  --foreground: #171717; /* Black text */
+  --background: #ffffff;
+  --foreground: #171717;
+  --foreground-700: #374151; /* gray-700 equivalent */
+  --foreground-500: #6b7280; /* gray-500 equivalent */
+  --foreground-300: #9ca3af; /* gray-300 equivalent */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff; /* Keep pure white for main text */
+    --foreground-700: #9ca3af; /* Muted gray (was too red before) */
+    --foreground-500: #6b7280; /* More muted */
+    --foreground-300: #4b5563; /* Very muted, blends toward background */
+  }
 }
 
 body {
@@ -57,6 +70,13 @@ a:hover {
   animation: shimmer 20s linear infinite;
 }
 
+/* Dark mode version with different colors */
+@media (prefers-color-scheme: dark) {
+  .red-blue-shimmer {
+    background-image: linear-gradient(90deg, #ff6b6b, #4dabf7, #ff6b6b);
+  }
+}
+
 .markdown-body {
   line-height: 1.6;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -76,4 +96,14 @@ a:hover {
 
 .markdown-body li {
   margin-bottom: 0.25em;
+}
+
+@media (max-width: 639px) {
+  .katex-display .tag {
+    display: none !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }

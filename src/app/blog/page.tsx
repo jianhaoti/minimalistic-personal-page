@@ -8,7 +8,7 @@ export default async function Blog() {
     <div>
       {posts.map((post, index) => (
         <article key={index} className="mb-12">
-          <p className="uppercase text-gray-700 text-xxs font-bold my-1">
+          <p className="uppercase text-foreground-700 text-xxs font-bold my-1">
             {new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(
               post.date
             )}

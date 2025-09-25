@@ -18,7 +18,7 @@ export default function ProjectLayout({
         <nav className="space-x-4">
           <Link
             href="/"
-            className={`text-gray-700 hover:text-gray-500 ${
+            className={`text-foreground-700 hover:text-foreground-500 ${
               pathname === "/" ? "underline" : "no-underline"
             }`}
           >
@@ -26,7 +26,7 @@ export default function ProjectLayout({
           </Link>
           <Link
             href="/blog"
-            className={`text-gray-700 hover:text-gray-500 ${
+            className={`text-foreground-700 hover:text-foreground-500 ${
               pathname === "/blog" ? "underline" : "no-underline"
             }`}
           >
@@ -34,7 +34,7 @@ export default function ProjectLayout({
           </Link>
           <Link
             href="/projects"
-            className={`text-gray-700 hover:text-gray-500 ${
+            className={`text-foreground-700 hover:text-foreground-500 ${
               pathname === "/projects" ? "underline" : "no-underline"
             }`}
           >

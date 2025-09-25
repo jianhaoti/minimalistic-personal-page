@@ -26,10 +26,10 @@ export default async function ProjectPost({ params }: ProjectPostProps) {
     return (
       <div className="max-w-3xl mx-auto ">
         {/* Header Section */}
-        <header className="border-b border-gray-300 pb-4 mb-6">
+        <header className="border-b border-foreground-300 pb-4 mb-6">
           <h1 className="text-3xl font-bold leading-none">{data.title}</h1>
-          <p className="text-gray-500 text-sm mb-2">{data.description}</p>
-          <p className="uppercase text-gray-700 text-xxs font-bold">
+          <p className="text-foreground-500 text-sm mb-2">{data.description}</p>
+          <p className="uppercase text-foreground-700 text-xxs font-bold">
             {data.date}
           </p>
         </header>

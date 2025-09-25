@@ -19,10 +19,12 @@ export default async function BlogPost({
 
   return (
     <div>
-      <header className="border-b border-gray-300 pb-4 mb-6">
+      <header className="border-b border-foreground-300 pb-4 mb-6">
         <h1 className="text-3xl font-bold">{post.frontMatter.title}</h1>
-        <p className="text-gray-500 text-sm mb-2">{post.frontMatter.excerpt}</p>
-        <p className="uppercase text-gray-700 text-xxs font-bold">
+        <p className="text-foreground-500 text-sm mb-2">
+          {post.frontMatter.excerpt}
+        </p>
+        <p className="uppercase text-foreground-700 text-xxs font-bold">
           {post.frontMatter.date}
         </p>
       </header>
