@@ -9,7 +9,7 @@ We extract the core insights from Ernerfeldt's blog post series 'The Myth of RAM
 
 I like algorithms. I really do. But somewhere near the end of a one-year sequence of algorithms I got a bit disillusioned, and I think it started when my instructor introduced Strassen's matrix multiplication algorithm. This algorithm made me realize there was a divorce between the big-O analysis we were doing, and the actual runtime performance.
 
-Ernerfeldt's blog post series gives a good attempt to capture this dissonance. His first insight is that we should shift our focus from analyzing the big-O of the number of operations, to the big-O of the _runtime_ in a hardware agnostic way. This is, after all, closer to the the performance metric that low-level engineers actually care about. For this metric, we must accept that the RAM model - randomly _accessing_ memory is a O(1) operation - is false. The reality is that access time is at least to $\Omega(\sqrt{N})$, for $N$ memory registers.
+Ernerfeldt's blog post series gives a good attempt to capture this dissonance. His first insight is that we should shift our focus from analyzing the big-O of the number of operations, to the big-O of the _runtime_ in a hardware agnostic way. This is, after all, closer to the the performance metric that low-level engineers actually care about. For this metric, we must accept that the RAM model - randomly _accessing_ memory is a O(1) operation - is false. The reality is that memory access time is $\Omega(\sqrt{N})$, for $N$ memory registers.
 
 Fundamentally, accessing memory is an inherently geometric variational problem, namely the isodiametric problem. Given $N$ memory registers, of equal size, what is the optimal layout in terms of minimizing diameter?
 
