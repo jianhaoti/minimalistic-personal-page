@@ -1,5 +1,5 @@
 ---
-title: "The Myth of RAM"
+title: "Why Cache Locality Matters"
 date: "23 October 2025"
 tags: ["hardware", "algorithms", "geometry"]
 excerpt: "
