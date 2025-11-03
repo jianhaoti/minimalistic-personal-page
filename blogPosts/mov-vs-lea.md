@@ -19,7 +19,7 @@ p(x):= 5x-x
 \end{equation}
 $$
 
-for various values of $x$. Hold off for the moment with identifying $p$ as $4x$. Since the CPU requires all arithmetic operations to be binary operations, we $p$ as the composition
+for various values of $x$. Hold off for the moment with identifying $p$ as $4x$. The stupidity of the CPU requires that all arithmetic operations are binary operations, so write $p$ as the composition
 
 $$
 \begin{equation}
