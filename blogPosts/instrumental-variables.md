@@ -23,4 +23,4 @@ Generally speaking, one must be incredibly careful when claiming exclusion restr
 2. applying to graduate school for further eduction,
 3. self-harm resulting in a disability.
 
-All three behviors listed above have clear impacts to life expectancy. If he dodged the draft to canada, then he will be projected to have the average Canadian life expectancy. If he pursued graduate school, this would have impacted future wages, which would impact his life expectancy. And if he had commited self-harm resulting in a disability, then that would have had obvious effects to life expectancy.
+All three behaviors listed above have clear impacts to life expectancy. If he dodged the draft to canada, then he will be projected to have the average Canadian life expectancy. If he pursued graduate school, this would have impacted future wages, which would impact his life expectancy. And if he had commited self-harm resulting in a disability, then that would have had obvious effects to life expectancy.
