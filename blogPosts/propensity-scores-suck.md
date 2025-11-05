@@ -1,5 +1,5 @@
 ---
-title: "Propenesity Scores Suck"
+title: "Propensity Scores Suck"
 date: "4 November 2025"
 tags: ["statistics"]
 excerpt: "
