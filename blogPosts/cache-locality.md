@@ -1,7 +1,7 @@
 ---
 title: "Why Cache Locality Matters"
 date: "23 October 2025"
-tags: ["hardware", "algorithms", "geometry"]
+tags: ["low-level", "algorithms", "geometry"]
 excerpt: "
 We extract the core insights from Ernerfeldt's blog post series 'The Myth of RAM', and present a link between his ideas and the isodiametric problem."
 
