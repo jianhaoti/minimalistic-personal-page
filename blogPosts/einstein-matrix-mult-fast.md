@@ -15,7 +15,7 @@ C^i_j = A^i_k B^k_j,
 \end{equation}
 $$
 
-where $k$ is a dummy index. To fill in matrix $C$, we must loop over $i,j$ as well. Therefore, all together we must loop over indices $i,j,k$ but the order in which we do so does not matter by Fubini's / commutativity of addition. This raises the question of which index we should put into the hot loop?
+where $k$ is a dummy index. To completely fill in matrix $C$, we must loop over $i,j$ as well. Altogether, we must loop over indices $i,j,k$. But the order in which we do so does not matter by Fubini's / commutativity of addition. This raises the question of which index we should put into the hot loop?
 
 The insight is that in row-major order languages, to obey spatial locality, we fix the row and iterate over the columns. In Einstein notation, this corresponds to fixing the top index and moving the bottom one. Looking at equation (1), we see a repeat of index $j$ on both sides of the equation (namely on matrices C and B). Therefore, we choose hot index $j$, which means choosing either $ikj$ or $kij$.
 
